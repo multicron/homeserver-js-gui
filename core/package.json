@@ -1,0 +1,11 @@
+{
+  "name": "@homeserver-js-gui/core",
+  "version": "0.1.0",
+  "description": "Core modules for HomeServer.js React GUI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eric K. Olson <olson@mauicomputing.com>",
+  "license": "MIT"
+}
