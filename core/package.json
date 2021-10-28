@@ -1,6 +1,7 @@
 {
   "name": "@homeserver-js-gui/core",
   "version": "0.1.0",
+  "type": "module",
   "description": "Core modules for HomeServer.js React GUI",
   "main": "index.js",
   "scripts": {
