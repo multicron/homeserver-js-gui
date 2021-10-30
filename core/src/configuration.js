@@ -13,8 +13,6 @@ export class Configuration {
             return Configuration.singleton;
         }
 
-        super();
-
         Object.assign(this, config);
 
         Configuration.singleton = this;
