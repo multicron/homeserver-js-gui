@@ -1,5 +1,5 @@
 import React from 'react';
-import { StateSubscriber } from '@homeserver-js-gui/core/StateSubscriber';
+import { StateSubscriber } from '@homeserver-js-gui/core';
 import { connect } from 'react-redux';
 import { inspect } from 'util';
 import Grid from '@material-ui/core/Grid';

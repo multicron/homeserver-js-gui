@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import { inspect } from 'util';
-import { HybridComponent } from '@homeserver-js-gui/core/HybridComponent';
-import configuration from '@homeserver-js-gui/core/configuration.js';
+import { HybridComponent } from '@homeserver-js-gui/core';
+import configuration from '@homeserver-js-gui/core';
 
 
 export class VideoMJPEG extends HybridComponent {

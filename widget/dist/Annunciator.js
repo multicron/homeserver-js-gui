@@ -2,11 +2,12 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import { HybridComponent } from '@homeserver-js-gui/core/HybridComponent';
+import { HybridComponent } from '@homeserver-js-gui/core';
 import { useSelector } from 'react-redux';
 import UpdateIndicator from '@homeserver-js-gui/widget/UpdateIndicator';
 export class Annunciator extends HybridComponent {
-  static defaultProps = { ...super.defaultProps,
+  static defaultProps = {
+    ...super.defaultProps,
     variant: 'h3',
     replacement: "—"
   };

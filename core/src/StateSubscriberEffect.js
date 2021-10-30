@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 
-import HybridEffect from '@homeserver-js-gui/core/HybridEffect';
-import { StateSubscriber } from '@homeserver-js-gui/core/StateSubscriber';
+import HybridEffect from '@homeserver-js-gui/core';
+import { StateSubscriber } from '@homeserver-js-gui/core';
 import { useReducer } from 'react';
 
 export default class StateSubscriberEffect extends HybridEffect {

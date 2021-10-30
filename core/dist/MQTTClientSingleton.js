@@ -1,4 +1,4 @@
-import configuration from '@homeserver-js-gui/core/configuration.js';
+import configuration from '@homeserver-js-gui/core';
 
 const mqtt = require('mqtt');
 

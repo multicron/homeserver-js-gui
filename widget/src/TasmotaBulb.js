@@ -8,7 +8,7 @@ import Slider from '@homeserver-js-gui/widget/Slider';
 import StateDisplay from '@homeserver-js-gui/widget/StateDisplay';
 import IconSwitch from '@homeserver-js-gui/widget/IconSwitch';
 // import ButtonGroup from '@material-ui/core/ButtonGroup';
-import configuration from '@homeserver-js-gui/core/configuration.js';
+import configuration from '@homeserver-js-gui/core';
 
 
 export default class TasmotaBulb extends React.Component {
