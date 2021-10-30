@@ -1,11 +1,12 @@
 {
-  "name": "@homeserver-js-gui/core",
+  "name": "@homeserver-js-gui/widget",
   "version": "0.1.0",
   "type": "module",
-  "description": "Core modules for HomeServer.js React GUI",
+  "description": "Widget modules for HomeServer.js React GUI",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx babel src --out-dir dist"
   },
   "author": "Eric K. Olson <olson@mauicomputing.com>",
   "license": "MIT",
