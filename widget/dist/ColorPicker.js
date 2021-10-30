@@ -1,5 +1,5 @@
 import React from 'react';
-import { MQTTClientSingleton } from 'MQTTClientSingleton';
+import { MQTTClientSingleton } from '@homeserver-js-gui/core/MQTTClientSingleton';
 import { connect } from 'react-redux';
 import { ColorPicker as PrimeColorPicker } from 'primereact/colorpicker';
 import 'primereact/resources/themes/nova-light/theme.css';

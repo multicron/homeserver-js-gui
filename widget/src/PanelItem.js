@@ -7,7 +7,7 @@ import Box from '@material-ui/core/Box';
 import Card from '@material-ui/core/Card';
 import CardContents from '@material-ui/core/Card';
 import { jsxFragment } from '@babel/types';
-import { HybridComponent } from 'HybridComponent';
+import { HybridComponent } from '@homeserver-js-gui/core/HybridComponent';
 
 export class PanelItem extends HybridComponent {
 

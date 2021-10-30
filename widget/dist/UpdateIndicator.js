@@ -1,8 +1,8 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React from 'react';
 import { useEffect, useReducer, useState } from 'react';
-import { HybridComponent } from 'HybridComponent';
-import { StateSubscriber } from 'StateSubscriber';
+import { HybridComponent } from '@homeserver-js-gui/core/HybridComponent';
+import { StateSubscriber } from '@homeserver-js-gui/core/StateSubscriber';
 export class UpdateIndicator extends HybridComponent {
   constructor(props) {
     super(props);

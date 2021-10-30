@@ -4,8 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { inspect } from 'util';
 export class PingAnnunciator extends Annunciator {
-  static defaultProps = {
-    ...super.defaultProps,
+  static defaultProps = { ...super.defaultProps,
     field: "reachable"
   };
 

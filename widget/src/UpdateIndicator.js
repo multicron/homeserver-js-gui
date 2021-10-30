@@ -2,8 +2,8 @@
 
 import React from 'react';
 import { useEffect, useReducer, useState } from 'react';
-import { HybridComponent } from 'HybridComponent';
-import { StateSubscriber } from 'StateSubscriber';
+import { HybridComponent } from '@homeserver-js-gui/core/HybridComponent';
+import { StateSubscriber } from '@homeserver-js-gui/core/StateSubscriber';
 
 export class UpdateIndicator extends HybridComponent {
 
@@ -77,7 +77,7 @@ export class UpdateIndicator extends HybridComponent {
                     border: "0px 0px 0px 0px"
                 }}>
                     &nbsp;{this.render_ago()}&nbsp;
-                    </span>
+                </span>
             </>
         );
     }

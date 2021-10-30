@@ -1,6 +1,6 @@
 import React from 'react';
 import Switch from '@material-ui/core/Switch';
-import { StateSubscriber } from 'StateSubscriber';
+import { StateSubscriber } from '@homeserver-js-gui/core/StateSubscriber';
 import { connect } from 'react-redux';
 export class TestComponent extends React.Component {
   constructor(props) {

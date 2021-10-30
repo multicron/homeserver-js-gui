@@ -3,7 +3,7 @@ import React from 'react';
 import { inspect } from 'util';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import { HybridComponent } from 'HybridComponent';
+import { HybridComponent } from '@homeserver-js-gui/core/HybridComponent';
 import { useSelector, shallowEqual } from 'react-redux';
 import UpdateIndicator from '@homeserver-js-gui/UpdateIndicator';
 export class PlaceHolder extends HybridComponent {

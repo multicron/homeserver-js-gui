@@ -1,8 +1,8 @@
 import React from 'react';
-import { StateSubscriber } from 'StateSubscriber';
+import { StateSubscriber } from '@homeserver-js-gui/core/StateSubscriber';
 import { inspect } from 'util';
 import configuration from '@homeserver-js-gui/core/configuration.js';
-import { HybridComponent } from 'HybridComponent';
+import { HybridComponent } from '@homeserver-js-gui/core/HybridComponent';
 import logger from "debug";
 const debug = logger('homeservergui:mqttwidget');
 export class MQTTWidget extends HybridComponent {

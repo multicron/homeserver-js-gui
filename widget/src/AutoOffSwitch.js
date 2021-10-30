@@ -15,7 +15,7 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import configuration from '@homeserver-js-gui/core/configuration.js';
 
-import { StateSubscriber } from 'StateSubscriber';
+import { StateSubscriber } from '@homeserver-js-gui/core/StateSubscriber';
 
 class __AutoOffSwitch extends React.Component {
 

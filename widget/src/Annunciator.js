@@ -3,7 +3,7 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import { HybridComponent } from 'HybridComponent';
+import { HybridComponent } from '@homeserver-js-gui/core/HybridComponent';
 import { useSelector } from 'react-redux';
 import UpdateIndicator from '@homeserver-js-gui/UpdateIndicator';
 

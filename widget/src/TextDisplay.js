@@ -1,5 +1,5 @@
 import React from 'react';
-import { StateSubscriber } from 'StateSubscriber';
+import { StateSubscriber } from '@homeserver-js-gui/core/StateSubscriber';
 import { connect } from 'react-redux';
 
 class __TextDisplay extends React.Component {
