@@ -15,8 +15,8 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-import IconSwitch from '@homeserver-js-gui/widget';
-import Slider from '@homeserver-js-gui/widget';
+import { IconSwitch } from '@homeserver-js-gui/widget';
+import { Slider } from '@homeserver-js-gui/widget';
 
 
 const useStyles = makeStyles(theme => ({

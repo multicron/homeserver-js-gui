@@ -2,10 +2,10 @@
 'use strict';
 
 import { createStore } from 'redux';
-import configuration from '@homeserver-js-gui/core';
+import { configuration } from '@homeserver-js-gui/core';
 
 import { MQTTClientSingleton } from '@homeserver-js-gui/core';
-import StateHolder from '@homeserver-js-gui/core';
+import { StateHolder } from '@homeserver-js-gui/core';
 import { StateReceiverSingleton } from '@homeserver-js-gui/core';
 
 const debug_state = require('debug')('homeservergui:state');

@@ -12,7 +12,7 @@ import { Slider as PrimeSlider } from 'primereact/slider';
 import 'primereact/resources/themes/nova-light/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
-import configuration from '@homeserver-js-gui/core';
+import { configuration } from '@homeserver-js-gui/core';
 import { MQTTWidget } from '@homeserver-js-gui/widget';
 import { useSelector } from 'react-redux';
 export class Slider extends MQTTWidget {

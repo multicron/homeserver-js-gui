@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 
-import HybridEffect from '@homeserver-js-gui/core';
+import { HybridEffect } from '@homeserver-js-gui/core';
 import { StateSubscriber } from '@homeserver-js-gui/core';
 import { useReducer } from 'react';
 

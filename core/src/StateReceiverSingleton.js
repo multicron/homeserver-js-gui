@@ -1,5 +1,5 @@
 import { MQTTClientSingleton } from '@homeserver-js-gui/core';
-import StateHolder from '@homeserver-js-gui/core';
+import { StateHolder } from '@homeserver-js-gui/core';
 
 const debug = require('debug')('homeservergui:state');
 

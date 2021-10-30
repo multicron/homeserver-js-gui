@@ -3,16 +3,16 @@ import Switch from '@material-ui/core/Switch';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
-import ToggleSwitch from '@homeserver-js-gui/widget';
-import Slider from '@homeserver-js-gui/widget';
-import StateDisplay from '@homeserver-js-gui/widget';
-import IconSwitch from '@homeserver-js-gui/widget';
+import { ToggleSwitch } from '@homeserver-js-gui/widget';
+import { Slider } from '@homeserver-js-gui/widget';
+import { StateDisplay } from '@homeserver-js-gui/widget';
+import { IconSwitch } from '@homeserver-js-gui/widget';
 import { connect } from 'react-redux';
 import { inspect } from 'util'; // import ButtonGroup from '@material-ui/core/ButtonGroup';
 
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import configuration from '@homeserver-js-gui/core';
+import { configuration } from '@homeserver-js-gui/core';
 import { StateSubscriber } from '@homeserver-js-gui/core';
 
 class __AutoOffSwitch extends React.Component {

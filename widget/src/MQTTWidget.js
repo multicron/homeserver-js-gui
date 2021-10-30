@@ -1,7 +1,7 @@
 import React from 'react';
 import { StateSubscriber } from '@homeserver-js-gui/core';
 import { inspect } from 'util';
-import configuration from '@homeserver-js-gui/core';
+import { configuration } from '@homeserver-js-gui/core';
 import { HybridComponent } from '@homeserver-js-gui/core';
 import logger from "debug"; const debug = logger('homeservergui:mqttwidget');
 

@@ -1,7 +1,7 @@
 'use strict';
 
 import { createStore } from 'redux';
-import configuration from '@homeserver-js-gui/core';
+import { configuration } from '@homeserver-js-gui/core';
 
 import { MQTTClientSingleton } from '@homeserver-js-gui/core';
 
