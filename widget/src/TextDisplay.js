@@ -36,7 +36,7 @@ function mapStateToProps(state, ownProps) {
     }
 }
 
-const TextDisplay = connect(
+export const TextDisplay = connect(
     mapStateToProps
 )(__TextDisplay)
 

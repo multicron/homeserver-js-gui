@@ -47,7 +47,7 @@ function mapStateToProps(state) {
 //     };
 // }
 
-const ReduxTestComponent = connect(
+export const ReduxTestComponent = connect(
     mapStateToProps
 )(TestComponent)
 

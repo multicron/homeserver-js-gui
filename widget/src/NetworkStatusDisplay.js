@@ -74,7 +74,7 @@ class __NetworkStatusDisplay extends React.Component {
     }
 }
 
-const NetworkStatusDisplay = connect()(__NetworkStatusDisplay)
+export const NetworkStatusDisplay = connect()(__NetworkStatusDisplay)
 
 NetworkStatusDisplay.defaultProps = {
 }

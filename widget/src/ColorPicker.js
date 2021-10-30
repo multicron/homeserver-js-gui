@@ -81,7 +81,7 @@ function mapStateToProps(state, ownProps) {
     }
 }
 
-const ColorPicker = connect(
+export const ColorPicker = connect(
     mapStateToProps
 )(__ColorPicker)
 

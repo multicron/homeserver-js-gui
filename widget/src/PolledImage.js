@@ -132,7 +132,7 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-const PolledImage = connect(
+export const PolledImage = connect(
     mapStateToProps
 )(__PolledImage)
 
