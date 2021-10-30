@@ -13,7 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import { HybridComponent } from '@homeserver-js-gui/core';
 import { useSelector } from 'react-redux';
 import { UpdateIndicator } from '@homeserver-js-gui/widget';
-export class Annunciator extends HybridComponent {
+export class _Annunciator extends HybridComponent {
   constructor(props) {
     super(props);
   }
@@ -62,9 +62,9 @@ export class Annunciator extends HybridComponent {
 
 }
 
-_defineProperty(Annunciator, "defaultProps", { ..._get(_getPrototypeOf(Annunciator), "defaultProps", Annunciator),
+_defineProperty(_Annunciator, "defaultProps", { ..._get(_getPrototypeOf(_Annunciator), "defaultProps", _Annunciator),
   variant: 'h3',
   replacement: "—"
 });
 
-export default Annunciator.functionalize();
+export const Annunciator = _Annunciator.functionalize();

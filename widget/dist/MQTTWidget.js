@@ -7,7 +7,7 @@ import { configuration } from '@homeserver-js-gui/core';
 import { HybridComponent } from '@homeserver-js-gui/core';
 import logger from "debug";
 const debug = logger('homeservergui:mqttwidget');
-export class MQTTWidget extends HybridComponent {
+export class _MQTTWidget extends HybridComponent {
   constructor(props) {
     super(props);
 
@@ -68,7 +68,7 @@ export class MQTTWidget extends HybridComponent {
 
 }
 
-_defineProperty(MQTTWidget, "defaultProps", {
+_defineProperty(_MQTTWidget, "defaultProps", {
   broker: configuration.mqtt_broker_url,
   topic: configuration.mqtt_command_topic,
   field: "power",
@@ -79,4 +79,4 @@ _defineProperty(MQTTWidget, "defaultProps", {
   debug: false
 });
 
-export default MQTTWidget.functionalize();
+export const MQTTWidget = _MQTTWidget.functionalize();

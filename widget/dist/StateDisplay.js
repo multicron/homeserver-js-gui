@@ -5,11 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import { HybridComponent } from '@homeserver-js-gui/core';
 import { useSelector, shallowEqual } from 'react-redux';
-export class StateDisplay extends HybridComponent {
-  constructor(props) {
-    super(props);
-  }
-
+export class _StateDisplay extends HybridComponent {
   variable_name() {
     return this.props.name.replace(/[^A-Za-z0-9_]/g, "_");
   }
@@ -43,4 +39,4 @@ export class StateDisplay extends HybridComponent {
   }
 
 }
-export default StateDisplay.functionalize();
+export const StateDisplay = _StateDisplay.functionalize();

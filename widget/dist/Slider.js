@@ -13,9 +13,9 @@ import 'primereact/resources/themes/nova-light/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import { configuration } from '@homeserver-js-gui/core';
-import { MQTTWidget } from '@homeserver-js-gui/widget';
+import { _MQTTWidget } from '@homeserver-js-gui/widget';
 import { useSelector } from 'react-redux';
-export class Slider extends MQTTWidget {
+export class _Slider extends _MQTTWidget {
   constructor(props) {
     super(props);
 
@@ -70,7 +70,7 @@ export class Slider extends MQTTWidget {
 
 }
 
-_defineProperty(Slider, "defaultProps", { ..._get(_getPrototypeOf(Slider), "defaultProps", Slider),
+_defineProperty(_Slider, "defaultProps", { ..._get(_getPrototypeOf(_Slider), "defaultProps", _Slider),
   field: "dimmer",
   value: 50,
   min: 0,
@@ -79,4 +79,4 @@ _defineProperty(Slider, "defaultProps", { ..._get(_getPrototypeOf(Slider), "defa
   max_update_rate: configuration.mqtt_max_update_rate
 });
 
-export default Slider.functionalize();
+export const Slider = _Slider.functionalize();

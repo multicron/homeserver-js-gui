@@ -3,7 +3,7 @@ import React from 'react';
 import Tick from '@pqina/flip';
 import flip from '@pqina/flip/dist/flip.min.css';
 
-export default class Flip extends React.Component {
+export class Flip extends React.Component {
     constructor(props) {
         super(props);
         this._tickRef = React.createRef();
@@ -35,3 +35,5 @@ export default class Flip extends React.Component {
         );
     }
 }
+
+export default Flip;

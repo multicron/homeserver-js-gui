@@ -2,7 +2,7 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import { Annunciator } from '@homeserver-js-gui/widget';
+import { _Annunciator } from '@homeserver-js-gui/widget';
 import { useSelector } from 'react-redux';
 const fields = {
   temperature: ["Temperature", "°F"],
@@ -15,11 +15,7 @@ const fields = {
   observation_time_local: ["Timestamp", ""]
 };
 
-class WeatherAnnunciator extends Annunciator {
-  constructor(props) {
-    super(props);
-  }
-
+class _WeatherAnnunciator extends _Annunciator {
   variable_name() {
     return this.props.name.replace(/[^A-Za-z0-9_]/g, "_");
   }
@@ -61,4 +57,4 @@ class WeatherAnnunciator extends Annunciator {
 
 }
 
-export default WeatherAnnunciator.functionalize();
+export const WeatherAnnunciator = _WeatherAnnunciator.functionalize();

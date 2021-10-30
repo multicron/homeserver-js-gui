@@ -10,9 +10,8 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
-import { IconSwitch } from '@homeserver-js-gui/widget';
-
-class EnableButton extends IconSwitch {
+import { _IconSwitch } from '@homeserver-js-gui/widget';
+export class _EnableButton extends _IconSwitch {
   render() {
     return /*#__PURE__*/React.createElement(React.Fragment, null, this.props.debug ? this.debug_data() : "", /*#__PURE__*/React.createElement(Typography, {
       component: "span"
@@ -48,9 +47,9 @@ class EnableButton extends IconSwitch {
 
 }
 
-_defineProperty(EnableButton, "defaultProps", { ..._get(_getPrototypeOf(EnableButton), "defaultProps", EnableButton),
+_defineProperty(_EnableButton, "defaultProps", { ..._get(_getPrototypeOf(_EnableButton), "defaultProps", _EnableButton),
   title: "ENABLE",
   field: "activate"
 });
 
-export default EnableButton.functionalize();
+export const EnableButton = _EnableButton.functionalize();

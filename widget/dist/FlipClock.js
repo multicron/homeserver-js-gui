@@ -10,8 +10,7 @@ import { jsxFragment } from '@babel/types';
 import Card from '@material-ui/core/Card';
 import CardContents from '@material-ui/core/Card';
 import { Flip } from '@homeserver-js-gui/widget';
-
-class FlipClock extends React.Component {
+export class FlipClock extends React.Component {
   constructor(props) {
     super(props);
     this.props = props;

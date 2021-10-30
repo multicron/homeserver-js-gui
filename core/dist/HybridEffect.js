@@ -1,6 +1,4 @@
-export default class HybridEffect {
-  constructor() {}
-
+export class HybridEffect {
   run() {// Override this method with your hook's main code
   }
 
@@ -19,3 +17,4 @@ export default class HybridEffect {
   }
 
 }
+export default HybridEffect;

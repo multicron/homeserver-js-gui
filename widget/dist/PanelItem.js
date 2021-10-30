@@ -4,12 +4,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 import { makeStyles } from '@material-ui/core/styles';
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
 import Card from '@material-ui/core/Card';
 import CardContents from '@material-ui/core/Card';
-import { jsxFragment } from '@babel/types';
 import { HybridComponent } from '@homeserver-js-gui/core';
-export class PanelItem extends HybridComponent {
+export class _PanelItem extends HybridComponent {
   constructor(props) {
     super(props);
     this.props = props;
@@ -49,10 +47,10 @@ export class PanelItem extends HybridComponent {
 
 }
 
-_defineProperty(PanelItem, "useStyles", makeStyles(theme => ({
+_defineProperty(_PanelItem, "useStyles", makeStyles(theme => ({
   card: {
     minWidth: 200
   }
 })));
 
-export default PanelItem.functionalize();
+export const PanelItem = _PanelItem.functionalize();

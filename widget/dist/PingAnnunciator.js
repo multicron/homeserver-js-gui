@@ -7,15 +7,10 @@ function _superPropBase(object, property) { while (!Object.prototype.hasOwnPrope
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 import React from 'react';
-import { Annunciator } from '@homeserver-js-gui/widget';
+import { _Annunciator } from '@homeserver-js-gui/widget';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import { inspect } from 'util';
-export class PingAnnunciator extends Annunciator {
-  constructor(props) {
-    super(props);
-  }
-
+export class _PingAnnunciator extends _Annunciator {
   render() {
     return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Grid, {
       component: "label",
@@ -32,6 +27,7 @@ export class PingAnnunciator extends Annunciator {
       }
     }, /*#__PURE__*/React.createElement("a", {
       target: "_blank",
+      rel: "noreferrer",
       style: {
         color: this.value ? "green" : "red",
         "textDecoration": "none"
@@ -42,8 +38,8 @@ export class PingAnnunciator extends Annunciator {
 
 }
 
-_defineProperty(PingAnnunciator, "defaultProps", { ..._get(_getPrototypeOf(PingAnnunciator), "defaultProps", PingAnnunciator),
+_defineProperty(_PingAnnunciator, "defaultProps", { ..._get(_getPrototypeOf(_PingAnnunciator), "defaultProps", _PingAnnunciator),
   field: "reachable"
 });
 
-export default PingAnnunciator.functionalize();
+export const PingAnnunciator = _PingAnnunciator.functionalize();

@@ -7,7 +7,7 @@ import Grid from '@material-ui/core/Grid';
 import { inspect } from 'util';
 import { HybridComponent } from '@homeserver-js-gui/core';
 import { configuration } from '@homeserver-js-gui/core';
-export class VideoMJPEG extends HybridComponent {
+export class _VideoMJPEG extends HybridComponent {
   constructor(props) {
     super(props);
     this.props = props;
@@ -93,11 +93,11 @@ export class VideoMJPEG extends HybridComponent {
 
 }
 
-_defineProperty(VideoMJPEG, "defaultProps", {
+_defineProperty(_VideoMJPEG, "defaultProps", {
   broker: configuration.mqtt_broker_url,
   topic: configuration.mqtt_command_topic,
   qos: 0,
   debug: false
 });
 
-export default VideoMJPEG.functionalize();
+export const VideoMJPEG = _VideoMJPEG.functionalize();

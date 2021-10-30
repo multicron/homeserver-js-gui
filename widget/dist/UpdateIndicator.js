@@ -5,7 +5,7 @@ import React from 'react';
 import { useEffect, useReducer, useState } from 'react';
 import { HybridComponent } from '@homeserver-js-gui/core';
 import { StateSubscriber } from '@homeserver-js-gui/core';
-export class UpdateIndicator extends HybridComponent {
+export class _UpdateIndicator extends HybridComponent {
   constructor(props) {
     super(props);
 
@@ -72,4 +72,4 @@ export class UpdateIndicator extends HybridComponent {
   }
 
 }
-export default UpdateIndicator.functionalize();
+export const UpdateIndicator = _UpdateIndicator.functionalize();
