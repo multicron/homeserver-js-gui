@@ -2,10 +2,11 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
-import { IconSwitch } from '@homeserver-js-gui/widget/IconSwitch';
+import { IconSwitch } from '@homeserver-js-gui/widget';
 
 class EnableButton extends IconSwitch {
-  static defaultProps = { ...super.defaultProps,
+  static defaultProps = {
+    ...super.defaultProps,
     title: "ENABLE",
     field: "activate"
   };

@@ -3,10 +3,10 @@ import Switch from '@material-ui/core/Switch';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
-import ToggleSwitch from '@homeserver-js-gui/widget/ToggleSwitch';
-import Slider from '@homeserver-js-gui/widget/Slider';
-import StateDisplay from '@homeserver-js-gui/widget/StateDisplay';
-import IconSwitch from '@homeserver-js-gui/widget/IconSwitch';
+import ToggleSwitch from '@homeserver-js-gui/widget';
+import Slider from '@homeserver-js-gui/widget';
+import StateDisplay from '@homeserver-js-gui/widget';
+import IconSwitch from '@homeserver-js-gui/widget';
 // import ButtonGroup from '@material-ui/core/ButtonGroup';
 import configuration from '@homeserver-js-gui/core';
 

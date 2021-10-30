@@ -3,12 +3,13 @@ import React from 'react';
 import Switch from '@material-ui/core/Switch';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import { MQTTWidget } from '@homeserver-js-gui/widget/MQTTWidget';
+import { MQTTWidget } from '@homeserver-js-gui/widget';
 import { useSelector } from 'react-redux';
 import logger from "debug";
 const debug = logger('homeservergui:toggleswitch');
 export class ToggleSwitch extends MQTTWidget {
-  static defaultProps = { ...super.defaultProps,
+  static defaultProps = {
+    ...super.defaultProps,
     field: "power",
     true_value: "true",
     false_value: "false",

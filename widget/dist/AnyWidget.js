@@ -1,26 +1,26 @@
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 import React from 'react';
-import ToggleSwitch from '@homeserver-js-gui/widget/ToggleSwitch';
-import Slider from '@homeserver-js-gui/widget/Slider';
-import TextDisplay from '@homeserver-js-gui/widget/TextDisplay';
-import IconSwitch from '@homeserver-js-gui/widget/IconSwitch';
-import TasmotaBulb from '@homeserver-js-gui/widget/TasmotaBulb';
-import TasmotaExpandable from '@homeserver-js-gui/widget/TasmotaExpandable';
-import TasmotaIconExpandable from '@homeserver-js-gui/widget/TasmotaIconExpandable';
-import AutoOffSwitch from '@homeserver-js-gui/widget/AutoOffSwitch';
-import ColorPicker from '@homeserver-js-gui/widget/ColorPicker';
-import PanelItem from '@homeserver-js-gui/widget/PanelItem';
-import EnableButton from '@homeserver-js-gui/widget/EnableButton';
+import ToggleSwitch from '@homeserver-js-gui/widget';
+import Slider from '@homeserver-js-gui/widget';
+import TextDisplay from '@homeserver-js-gui/widget';
+import IconSwitch from '@homeserver-js-gui/widget';
+import TasmotaBulb from '@homeserver-js-gui/widget';
+import TasmotaExpandable from '@homeserver-js-gui/widget';
+import TasmotaIconExpandable from '@homeserver-js-gui/widget';
+import AutoOffSwitch from '@homeserver-js-gui/widget';
+import ColorPicker from '@homeserver-js-gui/widget';
+import PanelItem from '@homeserver-js-gui/widget';
+import EnableButton from '@homeserver-js-gui/widget';
 import configuration from '@homeserver-js-gui/core';
-import VideoMJPEG from '@homeserver-js-gui/widget/VideoMJPEG';
-import PolledImage from '@homeserver-js-gui/widget/PolledImage';
-import NetworkStatusDisplay from '@homeserver-js-gui/widget/NetworkStatusDisplay';
-import PingAnnunciator from '@homeserver-js-gui/widget/PingAnnunciator';
-import StateDisplay from '@homeserver-js-gui/widget/StateDisplay';
-import Annunciator from '@homeserver-js-gui/widget/Annunciator';
-import WeatherAnnunciator from '@homeserver-js-gui/widget/WeatherAnnunciator';
-import PlaceHolder from '@homeserver-js-gui/widget/PlaceHolder';
+import VideoMJPEG from '@homeserver-js-gui/widget';
+import PolledImage from '@homeserver-js-gui/widget';
+import NetworkStatusDisplay from '@homeserver-js-gui/widget';
+import PingAnnunciator from '@homeserver-js-gui/widget';
+import StateDisplay from '@homeserver-js-gui/widget';
+import Annunciator from '@homeserver-js-gui/widget';
+import WeatherAnnunciator from '@homeserver-js-gui/widget';
+import PlaceHolder from '@homeserver-js-gui/widget';
 import { useSelector } from 'react-redux';
 export function AnyWidget(props) {
   const key = props.name.replace(/[^A-Za-z0-9_]/g, "_");

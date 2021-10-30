@@ -7,7 +7,7 @@ import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import configuration from '@homeserver-js-gui/core';
 
-import { MQTTWidget } from '@homeserver-js-gui/widget/MQTTWidget';
+import { MQTTWidget } from '@homeserver-js-gui/widget';
 import { useSelector } from 'react-redux'
 
 export class Slider extends MQTTWidget {

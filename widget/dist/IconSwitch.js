@@ -2,9 +2,10 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
-import { ToggleSwitch } from '@homeserver-js-gui/widget/ToggleSwitch';
+import { ToggleSwitch } from '@homeserver-js-gui/widget';
 export class IconSwitch extends ToggleSwitch {
-  static defaultProps = { ...super.defaultProps,
+  static defaultProps = {
+    ...super.defaultProps,
     size: "small",
     variant: "outlined"
   }; // handleChange needs to get "this" lexically

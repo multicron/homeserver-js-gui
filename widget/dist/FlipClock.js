@@ -7,7 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import { jsxFragment } from '@babel/types';
 import Card from '@material-ui/core/Card';
 import CardContents from '@material-ui/core/Card';
-import Flip from '@homeserver-js-gui/widget/Flip';
+import Flip from '@homeserver-js-gui/widget';
 
 class FlipClock extends React.Component {
   static defaultProps = {
