@@ -5,8 +5,7 @@ import Button from '@material-ui/core/Button';
 import { IconSwitch } from '@homeserver-js-gui/widget/IconSwitch';
 
 class EnableButton extends IconSwitch {
-  static defaultProps = {
-    ...super.defaultProps,
+  static defaultProps = { ...super.defaultProps,
     title: "ENABLE",
     field: "activate"
   };
