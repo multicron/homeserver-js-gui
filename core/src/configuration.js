@@ -2,7 +2,7 @@
 
 // import logger from "debug"; const debug = logger('homeserver:configuration');
 
-import config from "../../../src/configuration.js";
+import config from "../../../../src/configuration.js";
 
 export class Configuration {
 
