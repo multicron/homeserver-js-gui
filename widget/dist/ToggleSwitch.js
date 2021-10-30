@@ -1,50 +1,3 @@
-"use strict";
-
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = exports.ToggleSwitch = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _Switch = _interopRequireDefault(require("@material-ui/core/Switch"));
-
-var _Typography = _interopRequireDefault(require("@material-ui/core/Typography"));
-
-var _Grid = _interopRequireDefault(require("@material-ui/core/Grid"));
-
-var _widget = require("@homeserver-js-gui/widget");
-
-var _reactRedux = require("react-redux");
-
-var _debug = _interopRequireDefault(require("debug"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _get(target, property, receiver) { if (typeof Reflect !== "undefined" && Reflect.get) { _get = Reflect.get; } else { _get = function _get(target, property, receiver) { var base = _superPropBase(target, property); if (!base) return; var desc = Object.getOwnPropertyDescriptor(base, property); if (desc.get) { return desc.get.call(receiver); } return desc.value; }; } return _get(target, property, receiver || target); }
@@ -53,82 +6,62 @@ function _superPropBase(object, property) { while (!Object.prototype.hasOwnPrope
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
-var debug = (0, _debug.default)('homeservergui:toggleswitch');
+/* eslint-disable react-hooks/rules-of-hooks */
+import React from 'react';
+import Switch from '@material-ui/core/Switch';
+import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
+import { MQTTWidget } from '@homeserver-js-gui/widget';
+import { useSelector } from 'react-redux';
+import logger from "debug";
+const debug = logger('homeservergui:toggleswitch');
+export class ToggleSwitch extends MQTTWidget {
+  constructor(...args) {
+    super(...args);
 
-var ToggleSwitch = /*#__PURE__*/function (_MQTTWidget) {
-  _inherits(ToggleSwitch, _MQTTWidget);
-
-  var _super = _createSuper(ToggleSwitch);
-
-  function ToggleSwitch() {
-    var _this;
-
-    _classCallCheck(this, ToggleSwitch);
-
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    _this = _super.call.apply(_super, [this].concat(args));
-
-    _defineProperty(_assertThisInitialized(_this), "handleChange", function (event) {
+    _defineProperty(this, "handleChange", event => {
       debug("checked", event.target.checked);
-      var command = "".concat(_this.props.topic, "/").concat(_this.variable_name(), "/").concat(_this.props.field);
-      debug("Sending command", command, "for", _this.variable_name());
-
-      _this.send_mqtt_msg(command, event.target.checked ? _this.props.true_value : _this.props.false_value);
+      let command = `${this.props.topic}/${this.variable_name()}/${this.props.field}`;
+      debug("Sending command", command, "for", this.variable_name());
+      this.send_mqtt_msg(command, event.target.checked ? this.props.true_value : this.props.false_value);
     });
-
-    return _this;
   }
 
-  _createClass(ToggleSwitch, [{
-    key: "hooks",
-    value: function hooks(props) {
-      _get(_getPrototypeOf(ToggleSwitch.prototype), "hooks", this).call(this, props);
+  hooks(props) {
+    super.hooks(props);
+    let field = props.field;
+    let key = this.variable_name();
+    this.checked = useSelector(state_store => state_store[key] ? !!state_store[key][field] : false);
+  }
 
-      var field = props.field;
-      var key = this.variable_name();
-      this.checked = (0, _reactRedux.useSelector)(function (state_store) {
-        return state_store[key] ? !!state_store[key][field] : false;
-      });
-    }
-  }, {
-    key: "render",
-    value: function render(props) {
-      return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, this.props.debug ? this.debug_data() : "", /*#__PURE__*/_react.default.createElement(_Grid.default, {
-        component: "label",
-        container: true,
-        alignItems: "center",
-        direction: "column",
-        spacing: 1
-      }, /*#__PURE__*/_react.default.createElement(_Grid.default, {
-        item: true
-      }, /*#__PURE__*/_react.default.createElement(_Typography.default, {
-        component: "div"
-      }, this.props.name)), /*#__PURE__*/_react.default.createElement(_Grid.default, {
-        item: true
-      }, /*#__PURE__*/_react.default.createElement(_Switch.default, {
-        checked: this.checked,
-        onChange: this.handleChange,
-        color: this.props.color
-      }))));
-    }
-  }]);
+  render(props) {
+    return /*#__PURE__*/React.createElement(React.Fragment, null, this.props.debug ? this.debug_data() : "", /*#__PURE__*/React.createElement(Grid, {
+      component: "label",
+      container: true,
+      alignItems: "center",
+      direction: "column",
+      spacing: 1
+    }, /*#__PURE__*/React.createElement(Grid, {
+      item: true
+    }, /*#__PURE__*/React.createElement(Typography, {
+      component: "div"
+    }, this.props.name)), /*#__PURE__*/React.createElement(Grid, {
+      item: true
+    }, /*#__PURE__*/React.createElement(Switch, {
+      checked: this.checked,
+      onChange: this.handleChange,
+      color: this.props.color
+    }))));
+  }
 
-  return ToggleSwitch;
-}(_widget.MQTTWidget);
+}
 
-exports.ToggleSwitch = ToggleSwitch;
-
-_defineProperty(ToggleSwitch, "defaultProps", _objectSpread(_objectSpread({}, _get(_getPrototypeOf(ToggleSwitch), "defaultProps", ToggleSwitch)), {}, {
+_defineProperty(ToggleSwitch, "defaultProps", { ..._get(_getPrototypeOf(ToggleSwitch), "defaultProps", ToggleSwitch),
   field: "power",
   true_value: "true",
   false_value: "false",
   checked: false,
   debug: false
-}));
+});
 
-var _default = ToggleSwitch.functionalize();
-
-exports.default = _default;
+export default ToggleSwitch.functionalize();
