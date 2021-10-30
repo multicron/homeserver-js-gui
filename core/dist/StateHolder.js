@@ -56,7 +56,7 @@ function rootReducer(state, action) {
 } // TODO: Topic should include name.
 
 
-export default class StateHolder extends EventEmitter {
+export class StateHolder extends EventEmitter {
   constructor(name) {
     super();
     this.setMaxListeners(1000);
@@ -131,3 +131,4 @@ export default class StateHolder extends EventEmitter {
   }
 
 }
+export default StateHolder;

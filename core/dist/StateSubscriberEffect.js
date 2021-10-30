@@ -4,7 +4,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 import { HybridEffect } from '@homeserver-js-gui/core';
 import { StateSubscriber } from '@homeserver-js-gui/core';
 import { useReducer } from 'react';
-export default class StateSubscriberEffect extends HybridEffect {
+export class StateSubscriberEffect extends HybridEffect {
   constructor(device_name) {
     super();
 
@@ -31,3 +31,4 @@ export default class StateSubscriberEffect extends HybridEffect {
   }
 
 }
+export default StateSubscriberEffect;

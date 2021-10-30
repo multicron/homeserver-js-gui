@@ -5,7 +5,7 @@ import { configuration } from '@homeserver-js-gui/core';
 
 const debug = require('debug')('homeservergui:mqttswitch');
 
-export default class MQTTSwitch extends React.Component {
+export class MQTTSwitch extends React.Component {
 
     constructor(props) {
         super(props);
@@ -106,3 +106,5 @@ MQTTSwitch.defaultProps = {
     debug: false,
     disabled: true
 }
+
+export default MQTTSwitch;

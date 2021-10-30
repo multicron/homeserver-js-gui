@@ -5,11 +5,8 @@ import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import { ToggleSwitch } from '@homeserver-js-gui/widget';
 import { Slider } from '@homeserver-js-gui/widget';
-import { StateDisplay } from '@homeserver-js-gui/widget';
-import { IconSwitch } from '@homeserver-js-gui/widget'; // import ButtonGroup from '@material-ui/core/ButtonGroup';
-
 import { configuration } from '@homeserver-js-gui/core';
-export default class TasmotaBulb extends React.Component {
+export class TasmotaBulb extends React.Component {
   constructor(props) {
     super(props);
     this.props = props;
@@ -70,3 +67,4 @@ TasmotaBulb.defaultProps = {
   color: "primary",
   debug: false
 };
+export default TasmotaBulb;

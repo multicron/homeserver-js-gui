@@ -40,7 +40,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: red[500]
   }
 }));
-export default function TasmotaIconExpandable(props) {
+export function TasmotaIconExpandable(props) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -86,3 +86,4 @@ export default function TasmotaIconExpandable(props) {
     value: 3500
   }), " ", /*#__PURE__*/React.createElement("br", null))));
 }
+export default TasmotaIconExpandable;

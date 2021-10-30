@@ -42,7 +42,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export default function TasmotaExpandable(props) {
+export function TasmotaExpandable(props) {
     const classes = useStyles();
     const [expanded, setExpanded] = React.useState(false);
 
@@ -81,3 +81,5 @@ export default function TasmotaExpandable(props) {
         </Card>
     );
 }
+
+export default TasmotaExpandable;
