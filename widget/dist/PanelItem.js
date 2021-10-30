@@ -14,7 +14,7 @@ export class _PanelItem extends HybridComponent {
   }
 
   render() {
-    const classes = PanelItem.useStyles();
+    const classes = _PanelItem.useStyles();
 
     if (this.props.noCard) {
       return /*#__PURE__*/React.createElement(Grid, {
