@@ -8,8 +8,7 @@ import { useSelector } from 'react-redux';
 import logger from "debug";
 const debug = logger('homeservergui:toggleswitch');
 export class ToggleSwitch extends MQTTWidget {
-  static defaultProps = {
-    ...super.defaultProps,
+  static defaultProps = { ...super.defaultProps,
     field: "power",
     true_value: "true",
     false_value: "false",
