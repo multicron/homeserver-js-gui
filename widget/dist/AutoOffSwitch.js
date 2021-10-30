@@ -86,7 +86,7 @@ function mapDispatchToProps(dispatch) {
   return {};
 }
 
-const AutoOffSwitch = connect(mapStateToProps)(__AutoOffSwitch);
+export const AutoOffSwitch = connect(mapStateToProps)(__AutoOffSwitch);
 AutoOffSwitch.defaultProps = {
   broker: configuration.mqtt_broker_url,
   topic: configuration.mqtt_command_topic,

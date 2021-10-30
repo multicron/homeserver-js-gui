@@ -90,7 +90,7 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-const AutoOffSwitch = connect(
+export const AutoOffSwitch = connect(
     mapStateToProps
 )(__AutoOffSwitch)
 
