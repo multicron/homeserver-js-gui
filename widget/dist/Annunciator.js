@@ -6,8 +6,7 @@ import { HybridComponent } from '@homeserver-js-gui/core';
 import { useSelector } from 'react-redux';
 import UpdateIndicator from '@homeserver-js-gui/widget';
 export class Annunciator extends HybridComponent {
-  static defaultProps = {
-    ...super.defaultProps,
+  static defaultProps = { ...super.defaultProps,
     variant: 'h3',
     replacement: "—"
   };
