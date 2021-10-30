@@ -15,8 +15,8 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-import ToggleSwitch from 'Widget/ToggleSwitch';
-import Slider from 'Widget/Slider';
+import ToggleSwitch from '@homeserver-js-gui/ToggleSwitch';
+import Slider from '@homeserver-js-gui/Slider';
 
 
 const useStyles = makeStyles(theme => ({

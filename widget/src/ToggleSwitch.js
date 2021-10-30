@@ -4,7 +4,7 @@ import React from 'react';
 import Switch from '@material-ui/core/Switch';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import { MQTTWidget } from 'Widget/MQTTWidget';
+import { MQTTWidget } from '@homeserver-js-gui/MQTTWidget';
 import { useSelector } from 'react-redux'
 import logger from "debug"; const debug = logger('homeservergui:toggleswitch');
 

@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { HybridComponent } from 'HybridComponent';
 import { useSelector } from 'react-redux';
-import UpdateIndicator from 'Widget/UpdateIndicator';
+import UpdateIndicator from '@homeserver-js-gui/UpdateIndicator';
 
 export class Annunciator extends HybridComponent {
 

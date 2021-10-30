@@ -4,10 +4,10 @@ import Switch from '@material-ui/core/Switch';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
-import ToggleSwitch from 'Widget/ToggleSwitch';
-import Slider from 'Widget/Slider';
-import StateDisplay from 'Widget/StateDisplay';
-import IconSwitch from 'Widget/IconSwitch'; // import ButtonGroup from '@material-ui/core/ButtonGroup';
+import ToggleSwitch from '@homeserver-js-gui/ToggleSwitch';
+import Slider from '@homeserver-js-gui/Slider';
+import StateDisplay from '@homeserver-js-gui/StateDisplay';
+import IconSwitch from '@homeserver-js-gui/IconSwitch'; // import ButtonGroup from '@material-ui/core/ButtonGroup';
 
 import configuration from '@homeserver-js-gui/core/configuration.js';
 export default class TasmotaBulb extends React.Component {
