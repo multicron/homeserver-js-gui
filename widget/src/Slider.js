@@ -6,11 +6,10 @@ import 'primereact/resources/themes/nova-light/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import { configuration } from '@homeserver-js-gui/core';
-
-import { MQTTWidget } from '@homeserver-js-gui/widget';
+import { _MQTTWidget } from '@homeserver-js-gui/widget';
 import { useSelector } from 'react-redux'
 
-export class Slider extends MQTTWidget {
+export class _Slider extends _MQTTWidget {
 
     static defaultProps = {
         ...super.defaultProps,
@@ -85,4 +84,4 @@ export class Slider extends MQTTWidget {
     }
 }
 
-export default Slider.functionalize();
+export const Slider = _Slider.functionalize();

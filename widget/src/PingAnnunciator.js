@@ -1,19 +1,13 @@
 import React from 'react';
-import { Annunciator } from '@homeserver-js-gui/widget';
+import { _Annunciator } from '@homeserver-js-gui/widget';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import { inspect } from 'util';
 
-export class PingAnnunciator extends Annunciator {
+export class _PingAnnunciator extends _Annunciator {
 
     static defaultProps = {
         ...super.defaultProps,
         field: "reachable"
-    }
-
-    constructor(props) {
-        super(props);
-
     }
 
     render() {
@@ -23,6 +17,7 @@ export class PingAnnunciator extends Annunciator {
                     <Grid item>
                         <Typography component="div" style={{ textAlign: "center" }}>
                             <a target="_blank"
+                                rel="noreferrer"
                                 style={{
                                     color: this.value ? "green" : "red",
                                     "textDecoration": "none"
@@ -42,4 +37,4 @@ export class PingAnnunciator extends Annunciator {
     }
 }
 
-export default PingAnnunciator.functionalize();
+export const PingAnnunciator = _PingAnnunciator.functionalize();

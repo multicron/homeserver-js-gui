@@ -3,13 +3,11 @@
 import { makeStyles } from '@material-ui/core/styles';
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
 import Card from '@material-ui/core/Card';
 import CardContents from '@material-ui/core/Card';
-import { jsxFragment } from '@babel/types';
 import { HybridComponent } from '@homeserver-js-gui/core';
 
-export class PanelItem extends HybridComponent {
+export class _PanelItem extends HybridComponent {
 
     static useStyles = makeStyles(theme => ({
         card: {
@@ -47,4 +45,4 @@ export class PanelItem extends HybridComponent {
     }
 }
 
-export default PanelItem.functionalize();
+export const PanelItem = _PanelItem.functionalize();

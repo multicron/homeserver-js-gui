@@ -7,9 +7,6 @@ import { useRef } from 'react';
 // named export, e.g., import { HybridComponent } from 'HybridComponent.js'.
 // This will give you a class that you can extend.
 
-// If you use the default export, you get the functional component.
-// E.g., import HybridComponent from 'HybridComponent.js';
-
 export class HybridComponent {
 
     constructor(props) {

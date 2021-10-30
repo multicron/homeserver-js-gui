@@ -2,9 +2,9 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
-import { ToggleSwitch } from '@homeserver-js-gui/widget';
+import { _ToggleSwitch } from '@homeserver-js-gui/widget';
 
-export class IconSwitch extends ToggleSwitch {
+export class _IconSwitch extends _ToggleSwitch {
 
     static defaultProps = {
         ...super.defaultProps,
@@ -65,4 +65,4 @@ export class IconSwitch extends ToggleSwitch {
     }
 }
 
-export default IconSwitch.functionalize();
+export const IconSwitch = _IconSwitch.functionalize();

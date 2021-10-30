@@ -5,7 +5,7 @@ import { configuration } from '@homeserver-js-gui/core';
 import { HybridComponent } from '@homeserver-js-gui/core';
 import logger from "debug"; const debug = logger('homeservergui:mqttwidget');
 
-export class MQTTWidget extends HybridComponent {
+export class _MQTTWidget extends HybridComponent {
 
     static defaultProps = {
         broker: configuration.mqtt_broker_url,
@@ -94,4 +94,4 @@ export class MQTTWidget extends HybridComponent {
     }
 }
 
-export default MQTTWidget.functionalize();
+export const MQTTWidget = _MQTTWidget.functionalize();

@@ -7,7 +7,7 @@ import { HybridComponent } from '@homeserver-js-gui/core';
 import { useSelector } from 'react-redux';
 import { UpdateIndicator } from '@homeserver-js-gui/widget';
 
-export class Annunciator extends HybridComponent {
+export class _Annunciator extends HybridComponent {
 
     static defaultProps = {
         ...super.defaultProps,
@@ -62,4 +62,4 @@ export class Annunciator extends HybridComponent {
     }
 }
 
-export default Annunciator.functionalize();
+export const Annunciator = _Annunciator.functionalize();

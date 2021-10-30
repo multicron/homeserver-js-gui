@@ -4,11 +4,11 @@ import React from 'react';
 import Switch from '@material-ui/core/Switch';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import { MQTTWidget } from '@homeserver-js-gui/widget';
+import { _MQTTWidget } from '@homeserver-js-gui/widget';
 import { useSelector } from 'react-redux'
 import logger from "debug"; const debug = logger('homeservergui:toggleswitch');
 
-export class ToggleSwitch extends MQTTWidget {
+export class _ToggleSwitch extends _MQTTWidget {
 
     static defaultProps = {
         ...super.defaultProps,
@@ -60,4 +60,4 @@ export class ToggleSwitch extends MQTTWidget {
     }
 }
 
-export default ToggleSwitch.functionalize();
+export const ToggleSwitch = _ToggleSwitch.functionalize();

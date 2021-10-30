@@ -35,5 +35,5 @@ function mapStateToProps(state) {
 // }
 
 
-const ReduxTestComponent = connect(mapStateToProps)(TestComponent);
+export const ReduxTestComponent = connect(mapStateToProps)(TestComponent);
 export default ReduxTestComponent;

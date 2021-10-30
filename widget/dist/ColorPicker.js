@@ -68,7 +68,7 @@ function mapStateToProps(state, ownProps) {
   };
 }
 
-const ColorPicker = connect(mapStateToProps)(__ColorPicker);
+export const ColorPicker = connect(mapStateToProps)(__ColorPicker);
 ColorPicker.defaultProps = {
   broker: configuration.mqtt_broker_url,
   topic: configuration.mqtt_command_topic,

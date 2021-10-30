@@ -29,6 +29,6 @@ function mapStateToProps(state, ownProps) {
   };
 }
 
-const TextDisplay = connect(mapStateToProps)(__TextDisplay);
+export const TextDisplay = connect(mapStateToProps)(__TextDisplay);
 TextDisplay.defaultProps = {};
 export default TextDisplay;

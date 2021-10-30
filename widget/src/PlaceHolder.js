@@ -1,18 +1,13 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 
 import React from 'react';
-import { inspect } from 'util';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import { HybridComponent } from '@homeserver-js-gui/core';
 import { useSelector, shallowEqual } from 'react-redux';
 import { UpdateIndicator } from '@homeserver-js-gui/widget';
 
-export class PlaceHolder extends HybridComponent {
-
-    constructor(props) {
-        super(props);
-    }
+export class _PlaceHolder extends HybridComponent {
 
     variable_name() {
         return this.props.name.replace(/[^A-Za-z0-9_]/g, "_");
@@ -44,4 +39,4 @@ export class PlaceHolder extends HybridComponent {
     }
 }
 
-export default PlaceHolder.functionalize();
+export const PlaceHolder = _PlaceHolder.functionalize();

@@ -123,7 +123,7 @@ function mapDispatchToProps(dispatch) {
   return {};
 }
 
-const PolledImage = connect(mapStateToProps)(__PolledImage);
+export const PolledImage = connect(mapStateToProps)(__PolledImage);
 PolledImage.defaultProps = {
   broker: configuration.mqtt_broker_url,
   topic: configuration.mqtt_command_topic,

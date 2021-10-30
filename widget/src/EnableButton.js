@@ -2,9 +2,9 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
-import { IconSwitch } from '@homeserver-js-gui/widget';
+import { _IconSwitch } from '@homeserver-js-gui/widget';
 
-class EnableButton extends IconSwitch {
+export class _EnableButton extends _IconSwitch {
 
     static defaultProps = {
         ...super.defaultProps,
@@ -47,4 +47,4 @@ class EnableButton extends IconSwitch {
     }
 }
 
-export default EnableButton.functionalize();
+export const EnableButton = _EnableButton.functionalize();

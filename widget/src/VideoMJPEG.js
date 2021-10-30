@@ -8,7 +8,7 @@ import { HybridComponent } from '@homeserver-js-gui/core';
 import { configuration } from '@homeserver-js-gui/core';
 
 
-export class VideoMJPEG extends HybridComponent {
+export class _VideoMJPEG extends HybridComponent {
 
     static defaultProps = {
         broker: configuration.mqtt_broker_url,
@@ -106,4 +106,4 @@ export class VideoMJPEG extends HybridComponent {
     }
 }
 
-export default VideoMJPEG.functionalize();
+export const VideoMJPEG = _VideoMJPEG.functionalize();
