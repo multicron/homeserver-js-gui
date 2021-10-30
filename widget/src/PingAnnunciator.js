@@ -1,5 +1,5 @@
 import React from 'react';
-import { Annunciator } from '@homeserver-js-gui/Annunciator';
+import { Annunciator } from '@homeserver-js-gui/widget/Annunciator';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { inspect } from 'util';

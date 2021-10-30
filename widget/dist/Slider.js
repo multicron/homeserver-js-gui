@@ -5,10 +5,11 @@ import 'primereact/resources/themes/nova-light/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import configuration from '@homeserver-js-gui/core/configuration.js';
-import { MQTTWidget } from '@homeserver-js-gui/MQTTWidget';
+import { MQTTWidget } from '@homeserver-js-gui/widget/MQTTWidget';
 import { useSelector } from 'react-redux';
 export class Slider extends MQTTWidget {
-  static defaultProps = { ...super.defaultProps,
+  static defaultProps = {
+    ...super.defaultProps,
     field: "dimmer",
     value: 50,
     min: 0,

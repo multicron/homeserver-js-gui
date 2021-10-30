@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import { HybridComponent } from '@homeserver-js-gui/core/HybridComponent';
 import { useSelector, shallowEqual } from 'react-redux';
-import UpdateIndicator from '@homeserver-js-gui/UpdateIndicator';
+import UpdateIndicator from '@homeserver-js-gui/widget/UpdateIndicator';
 export class PlaceHolder extends HybridComponent {
   constructor(props) {
     super(props);
