@@ -6,6 +6,9 @@ import { inspect } from 'util';
 import { configuration } from '@homeserver-js-gui/core';
 import { HybridComponent } from '@homeserver-js-gui/core';
 import logger from "debug";
+import { jsx as _jsx } from "react/jsx-runtime";
+import { jsxs as _jsxs } from "react/jsx-runtime";
+import { Fragment as _Fragment } from "react/jsx-runtime";
 const debug = logger('homeservergui:mqttwidget');
 export class _MQTTWidget extends HybridComponent {
   constructor(props) {
@@ -55,7 +58,9 @@ export class _MQTTWidget extends HybridComponent {
   }
 
   debug_data() {
-    return /*#__PURE__*/React.createElement("div", null, "State: ", inspect(this.state_subscriber.get()), /*#__PURE__*/React.createElement("br", null), "Props: ", inspect(this.props));
+    return /*#__PURE__*/_jsxs("div", {
+      children: ["State: ", inspect(this.state_subscriber.get()), /*#__PURE__*/_jsx("br", {}), "Props: ", inspect(this.props)]
+    });
   }
 
   hooks(props) {
@@ -63,7 +68,9 @@ export class _MQTTWidget extends HybridComponent {
   }
 
   render(props) {
-    return /*#__PURE__*/React.createElement(React.Fragment, null, this.props.debug ? this.debug_data() : "", "MQTTWidget");
+    return /*#__PURE__*/_jsxs(_Fragment, {
+      children: [this.props.debug ? this.debug_data() : "", "MQTTWidget"]
+    });
   }
 
 }

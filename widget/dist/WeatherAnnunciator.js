@@ -4,6 +4,9 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { _Annunciator } from '@homeserver-js-gui/widget';
 import { useSelector } from 'react-redux';
+import { jsx as _jsx } from "react/jsx-runtime";
+import { jsxs as _jsxs } from "react/jsx-runtime";
+import { Fragment as _Fragment } from "react/jsx-runtime";
 const fields = {
   temperature: ["Temperature", "°F"],
   wind_chill: ["Wind Chill", "°F"],
@@ -32,27 +35,41 @@ class _WeatherAnnunciator extends _Annunciator {
   render() {
     let rows = [];
     Object.keys(fields).forEach(fieldname => {
-      rows.push( /*#__PURE__*/React.createElement("tr", {
-        key: fieldname
-      }, /*#__PURE__*/React.createElement("td", null, fields[fieldname][0]), /*#__PURE__*/React.createElement("td", {
-        align: "right"
-      }, /*#__PURE__*/React.createElement("b", null, this.value[fieldname], fields[fieldname][1]))));
+      rows.push( /*#__PURE__*/_jsxs("tr", {
+        children: [/*#__PURE__*/_jsx("td", {
+          children: fields[fieldname][0]
+        }), /*#__PURE__*/_jsx("td", {
+          align: "right",
+          children: /*#__PURE__*/_jsxs("b", {
+            children: [this.value[fieldname], fields[fieldname][1]]
+          })
+        })]
+      }, fieldname));
     });
-    return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Grid, {
-      component: "label",
-      container: true,
-      alignItems: "center",
-      direction: "column",
-      spacing: 1
-    }, /*#__PURE__*/React.createElement(Grid, {
-      item: true
-    }, /*#__PURE__*/React.createElement(Typography, {
-      component: "div"
-    }, this.props.title)), /*#__PURE__*/React.createElement(Grid, {
-      item: true
-    }, /*#__PURE__*/React.createElement("table", {
-      width: "100%"
-    }, /*#__PURE__*/React.createElement("tbody", null, rows)))));
+    return /*#__PURE__*/_jsx(_Fragment, {
+      children: /*#__PURE__*/_jsxs(Grid, {
+        component: "label",
+        container: true,
+        alignItems: "center",
+        direction: "column",
+        spacing: 1,
+        children: [/*#__PURE__*/_jsx(Grid, {
+          item: true,
+          children: /*#__PURE__*/_jsx(Typography, {
+            component: "div",
+            children: this.props.title
+          })
+        }), /*#__PURE__*/_jsx(Grid, {
+          item: true,
+          children: /*#__PURE__*/_jsx("table", {
+            width: "100%",
+            children: /*#__PURE__*/_jsx("tbody", {
+              children: rows
+            })
+          })
+        })]
+      })
+    });
   }
 
 }

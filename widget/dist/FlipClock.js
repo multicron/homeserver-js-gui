@@ -10,6 +10,9 @@ import { jsxFragment } from '@babel/types';
 import Card from '@material-ui/core/Card';
 import CardContents from '@material-ui/core/Card';
 import { Flip } from '@homeserver-js-gui/widget';
+import { jsx as _jsx } from "react/jsx-runtime";
+import { jsxs as _jsxs } from "react/jsx-runtime";
+import { Fragment as _Fragment } from "react/jsx-runtime";
 export class FlipClock extends React.Component {
   constructor(props) {
     super(props);
@@ -56,35 +59,43 @@ export class FlipClock extends React.Component {
   }
 
   render() {
-    return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Grid, {
-      component: "label",
-      container: true,
-      alignItems: "center",
-      direction: "column",
-      spacing: 1
-    }, /*#__PURE__*/React.createElement(Grid, {
-      item: true,
-      p: 5,
-      xs: 12,
-      sm: 12,
-      md: 12,
-      lg: 12,
-      xl: 12
-    }, /*#__PURE__*/React.createElement(Card, null, /*#__PURE__*/React.createElement(CardContents, {
-      style: {
-        padding: "8px 0px"
-      }
-    }, /*#__PURE__*/React.createElement(Typography, {
-      component: "div",
-      noWrap: true,
-      variant: "h3"
-    }, /*#__PURE__*/React.createElement(Flip, {
-      value: this.state.hour
-    }), this.props.separator, /*#__PURE__*/React.createElement(Flip, {
-      value: this.state.minute
-    }), this.props.separator, /*#__PURE__*/React.createElement(Flip, {
-      value: this.state.second
-    })))))));
+    return /*#__PURE__*/_jsx(_Fragment, {
+      children: /*#__PURE__*/_jsx(Grid, {
+        component: "label",
+        container: true,
+        alignItems: "center",
+        direction: "column",
+        spacing: 1,
+        children: /*#__PURE__*/_jsx(Grid, {
+          item: true,
+          p: 5,
+          xs: 12,
+          sm: 12,
+          md: 12,
+          lg: 12,
+          xl: 12,
+          children: /*#__PURE__*/_jsx(Card, {
+            children: /*#__PURE__*/_jsx(CardContents, {
+              style: {
+                padding: "8px 0px"
+              },
+              children: /*#__PURE__*/_jsxs(Typography, {
+                component: "div",
+                noWrap: true,
+                variant: "h3",
+                children: [/*#__PURE__*/_jsx(Flip, {
+                  value: this.state.hour
+                }), this.props.separator, /*#__PURE__*/_jsx(Flip, {
+                  value: this.state.minute
+                }), this.props.separator, /*#__PURE__*/_jsx(Flip, {
+                  value: this.state.second
+                })]
+              })
+            })
+          })
+        })
+      })
+    });
   }
 
 }

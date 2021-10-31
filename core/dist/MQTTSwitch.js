@@ -2,6 +2,9 @@ import React from 'react';
 import Switch from '@material-ui/core/Switch';
 import mqtt from 'mqtt';
 import { configuration } from '@homeserver-js-gui/core';
+import { jsx as _jsx } from "react/jsx-runtime";
+import { Fragment as _Fragment } from "react/jsx-runtime";
+import { jsxs as _jsxs } from "react/jsx-runtime";
 
 const debug = require('debug')('homeservergui:mqttswitch');
 
@@ -81,15 +84,17 @@ export class MQTTSwitch extends React.Component {
   }
 
   render() {
-    return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Switch, {
-      checked: this.state.power,
-      onChange: this.handleChange.bind(this, 'power'),
-      disabled: this.props.disabled,
-      color: "primary",
-      inputProps: {
-        'aria-label': 'power switch'
-      }
-    }), this.props.topic);
+    return /*#__PURE__*/_jsxs(_Fragment, {
+      children: [/*#__PURE__*/_jsx(Switch, {
+        checked: this.state.power,
+        onChange: this.handleChange.bind(this, 'power'),
+        disabled: this.props.disabled,
+        color: "primary",
+        inputProps: {
+          'aria-label': 'power switch'
+        }
+      }), this.props.topic]
+    });
   }
 
 }

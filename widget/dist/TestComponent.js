@@ -2,6 +2,9 @@ import React from 'react';
 import Switch from '@material-ui/core/Switch';
 import { StateSubscriber } from '@homeserver-js-gui/core';
 import { connect } from 'react-redux';
+import { jsxs as _jsxs } from "react/jsx-runtime";
+import { jsx as _jsx } from "react/jsx-runtime";
+import { Fragment as _Fragment } from "react/jsx-runtime";
 export class TestComponent extends React.Component {
   constructor(props) {
     super(props);
@@ -15,9 +18,13 @@ export class TestComponent extends React.Component {
   }
 
   render() {
-    return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("pre", null, JSON.stringify(this.state), JSON.stringify(this.state_subscriber.store), JSON.stringify(this.props)), /*#__PURE__*/React.createElement(Switch, {
-      checked: this.props.checked
-    }));
+    return /*#__PURE__*/_jsxs(_Fragment, {
+      children: [/*#__PURE__*/_jsxs("pre", {
+        children: [JSON.stringify(this.state), JSON.stringify(this.state_subscriber.store), JSON.stringify(this.props)]
+      }), /*#__PURE__*/_jsx(Switch, {
+        checked: this.props.checked
+      })]
+    });
   }
 
 }

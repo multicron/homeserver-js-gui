@@ -10,30 +10,39 @@ import React from 'react';
 import { _Annunciator } from '@homeserver-js-gui/widget';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import { jsx as _jsx } from "react/jsx-runtime";
+import { jsxs as _jsxs } from "react/jsx-runtime";
+import { Fragment as _Fragment } from "react/jsx-runtime";
 export class _PingAnnunciator extends _Annunciator {
   render() {
-    return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Grid, {
-      component: "label",
-      container: true,
-      alignItems: "center",
-      direction: "column",
-      spacing: 1
-    }, /*#__PURE__*/React.createElement(Grid, {
-      item: true
-    }, /*#__PURE__*/React.createElement(Typography, {
-      component: "div",
-      style: {
-        textAlign: "center"
-      }
-    }, /*#__PURE__*/React.createElement("a", {
-      target: "_blank",
-      rel: "noreferrer",
-      style: {
-        color: this.value ? "green" : "red",
-        "textDecoration": "none"
-      },
-      href: `http://${this.props.title}:${this.props.port}/`
-    }, this.props.comment, /*#__PURE__*/React.createElement("br", null), this.props.name, /*#__PURE__*/React.createElement("br", null), this.props.ip, this.props.port === "80" ? "" : `:${this.props.port}`)))));
+    return /*#__PURE__*/_jsx(_Fragment, {
+      children: /*#__PURE__*/_jsx(Grid, {
+        component: "label",
+        container: true,
+        alignItems: "center",
+        direction: "column",
+        spacing: 1,
+        children: /*#__PURE__*/_jsx(Grid, {
+          item: true,
+          children: /*#__PURE__*/_jsx(Typography, {
+            component: "div",
+            style: {
+              textAlign: "center"
+            },
+            children: /*#__PURE__*/_jsxs("a", {
+              target: "_blank",
+              rel: "noreferrer",
+              style: {
+                color: this.value ? "green" : "red",
+                "textDecoration": "none"
+              },
+              href: `http://${this.props.title}:${this.props.port}/`,
+              children: [this.props.comment, /*#__PURE__*/_jsx("br", {}), this.props.name, /*#__PURE__*/_jsx("br", {}), this.props.ip, this.props.port === "80" ? "" : `:${this.props.port}`]
+            })
+          })
+        })
+      })
+    });
   }
 
 }

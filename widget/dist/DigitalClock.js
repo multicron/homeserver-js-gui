@@ -1,6 +1,9 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import { jsx as _jsx } from "react/jsx-runtime";
+import { jsxs as _jsxs } from "react/jsx-runtime";
+import { Fragment as _Fragment } from "react/jsx-runtime";
 
 class Clock extends React.Component {
   constructor(props) {
@@ -65,23 +68,30 @@ class Clock extends React.Component {
   }
 
   render() {
-    return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Grid, {
-      component: "label",
-      container: true,
-      alignItems: "center",
-      direction: "column",
-      spacing: 1
-    }, /*#__PURE__*/React.createElement(Grid, {
-      item: true
-    }, /*#__PURE__*/React.createElement(Typography, {
-      component: "div"
-    }, this.props.title)), /*#__PURE__*/React.createElement(Grid, {
-      item: true
-    }, /*#__PURE__*/React.createElement(Typography, {
-      component: "div",
-      noWrap: true,
-      variant: "h3"
-    }, this.state.time))));
+    return /*#__PURE__*/_jsx(_Fragment, {
+      children: /*#__PURE__*/_jsxs(Grid, {
+        component: "label",
+        container: true,
+        alignItems: "center",
+        direction: "column",
+        spacing: 1,
+        children: [/*#__PURE__*/_jsx(Grid, {
+          item: true,
+          children: /*#__PURE__*/_jsx(Typography, {
+            component: "div",
+            children: this.props.title
+          })
+        }), /*#__PURE__*/_jsx(Grid, {
+          item: true,
+          children: /*#__PURE__*/_jsx(Typography, {
+            component: "div",
+            noWrap: true,
+            variant: "h3",
+            children: this.state.time
+          })
+        })]
+      })
+    });
   }
 
 }

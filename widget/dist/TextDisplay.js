@@ -1,6 +1,8 @@
 import React from 'react';
 import { StateSubscriber } from '@homeserver-js-gui/core';
 import { connect } from 'react-redux';
+import { Fragment as _Fragment } from "react/jsx-runtime";
+import { jsx as _jsx } from "react/jsx-runtime";
 
 class __TextDisplay extends React.Component {
   constructor(props) {
@@ -14,7 +16,9 @@ class __TextDisplay extends React.Component {
   }
 
   render() {
-    return /*#__PURE__*/React.createElement(React.Fragment, null, this.state_subscriber.get().text);
+    return /*#__PURE__*/_jsx(_Fragment, {
+      children: this.state_subscriber.get().text
+    });
   }
 
 }
