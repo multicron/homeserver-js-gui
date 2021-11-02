@@ -36,10 +36,17 @@ export class _PanelItem extends HybridComponent {
         else {
             return (
                 <Grid item p={5} xs={12} sm={6} md={4} lg={3} xl={2}>
-                    <Card className={classes.card}><CardContents style={{ padding: "8px 0px" }}>
-                        {this.props.children}
-                    </CardContents></Card>
-                </Grid>
+                    <Card className={classes.card}>
+                        <CardContents
+                            style={{
+                                padding: "8px 8px",
+                                minHeight: '15vh'
+                            }}>
+                            {this.props.children}
+
+                        </CardContents>
+                    </Card>
+                </Grid >
             );
         }
     }

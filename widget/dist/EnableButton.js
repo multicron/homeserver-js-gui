@@ -28,7 +28,7 @@ export class _EnableButton extends _IconSwitch {
           justify: "space-evenly",
           children: [/*#__PURE__*/_jsx(Grid, {
             item: true,
-            children: this.props.name
+            children: "\xA0"
           }), /*#__PURE__*/_jsx(Grid, {
             item: true,
             children: /*#__PURE__*/_jsx(Grid, {
@@ -45,7 +45,10 @@ export class _EnableButton extends _IconSwitch {
                   size: this.props.size,
                   onClick: e => this.handleChange(e, true),
                   color: this.props.color,
-                  children: this.props.title
+                  style: {
+                    textTransform: 'none'
+                  },
+                  children: this.props.name
                 })
               })
             })
@@ -60,8 +63,8 @@ export class _EnableButton extends _IconSwitch {
 }
 
 _defineProperty(_EnableButton, "defaultProps", { ..._get(_getPrototypeOf(_EnableButton), "defaultProps", _EnableButton),
-  title: "ENABLE",
-  field: "activate"
+  field: "activate",
+  size: "large"
 });
 
 export const EnableButton = _EnableButton.functionalize();

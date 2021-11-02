@@ -41,7 +41,8 @@ export class _PanelItem extends HybridComponent {
           className: classes.card,
           children: /*#__PURE__*/_jsx(CardContents, {
             style: {
-              padding: "8px 0px"
+              padding: "8px 8px",
+              minHeight: '15vh'
             },
             children: this.props.children
           })

@@ -8,8 +8,8 @@ export class _EnableButton extends _IconSwitch {
 
     static defaultProps = {
         ...super.defaultProps,
-        title: "ENABLE",
-        field: "activate"
+        field: "activate",
+        size: "large"
     }
 
     render() {
@@ -24,7 +24,7 @@ export class _EnableButton extends _IconSwitch {
                         spacing={1}
                         justify="space-evenly"
                     >
-                        <Grid item>{this.props.name}</Grid>
+                        <Grid item>&nbsp;</Grid>
                         <Grid item>
                             <Grid container spacing={1} component="div" direction="column" alignItems="center">
                                 <Grid item p={5}>
@@ -33,8 +33,8 @@ export class _EnableButton extends _IconSwitch {
                                         size={this.props.size}
                                         onClick={(e) => this.handleChange(e, true)}
                                         color={this.props.color}
-                                    >
-                                        {this.props.title}
+                                        style={{ textTransform: 'none' }}>
+                                        {this.props.name}
                                     </Button>
                                 </Grid>
                             </Grid>
