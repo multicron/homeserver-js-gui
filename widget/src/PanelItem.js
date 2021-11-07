@@ -40,7 +40,7 @@ export class _PanelItem extends HybridComponent {
                         <CardContents
                             style={{
                                 padding: "8px 8px",
-                                minHeight: '15vh'
+                                minHeight: '13vh'
                             }}>
                             {this.props.children}
 
