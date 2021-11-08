@@ -6,7 +6,9 @@ const spawn = require('child_process').spawn;
 const { Command } = require('commander');
 const program = new Command();
 
-program.option("--vers <version>", "version number for npm version");
+program
+    .option("--vers <version>", "version number for npm version")
+    .option("--otp <one-time-pad>", "one-time pad for npm publish");
 
 console.log(process.argv);
 
@@ -85,14 +87,10 @@ function version_widget() {
 }
 
 
-function publish() {
-    return gulp.series(
-        execute(`npm publish`, `${exec_dir}/core`),
-        execute(`npm publish`, `${exec_dir}/widget`)
-    );
-
-}
-
+const publish = gulp.series(
+    () => execute(`npm publish --otp=${program.opts().otp}`, `${exec_dir}/core`),
+    () => execute(`npm publish --otp=${program.opts().otp}`, `${exec_dir}/widget`)
+);
 
 function test() {
     return gulp.src('*/package.json').pipe(console.log);
