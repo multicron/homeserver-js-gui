@@ -6,6 +6,7 @@ const exec = require('gulp-exec');
 const spawn = require('child_process').spawn;
 const { Command } = require('commander');
 const program = new Command();
+const util = require('util');
 
 program
     .option("--vers <version>", "version number for npm version")
@@ -92,9 +93,13 @@ const publish = gulp.series(
 
 function test() {
     return gulp
-        .src('*/package.json')
+        .src('*/')
         .pipe(debug())
-        .pipe(exec((file) => `echo ${file.path}`));
+        .pipe(exec((file) => {
+            console.log("LOG:", file.path);
+            return `echo ${file.path}`;
+        }))
+    // .pipe(exec.reporter())
 }
 
 async function help() {
