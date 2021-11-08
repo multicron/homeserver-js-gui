@@ -1,7 +1,18 @@
 'use strict';
 
 const gulp = require('gulp');
+const debug = reguire('gulp-debug');
 const spawn = require('child_process').spawn;
+const { Command } = require('commander');
+const program = new Command();
+
+program.option("--vers <version>", "version number for npm version");
+
+console.log(process.argv);
+
+program.parse(process.argv);
+
+console.log(program.opts());
 
 let exec_dir = process.cwd();
 
@@ -56,23 +67,45 @@ function build_core() {
 }
 
 function build_widget() {
-    return execute('npm run build', `${exec_dir}/core`);
+    return execute('npm run build', `${exec_dir}/widget`);
+}
+
+function version_core() {
+    if (!program.opts().vers) {
+        throw new Error("No version number specified");
+    }
+    return execute(`npm version ${program.opts().vers}`, `${exec_dir}/core`);
+}
+
+function version_widget() {
+    if (!program.opts().vers) {
+        throw new Error("No version number specified");
+    }
+    return execute(`npm version ${program.opts().vers}`, `${exec_dir}/widget`);
+}
+
+function test() {
+    return gulp.src('*/package.json').pipe(console.log);
 }
 
 async function help() {
     console.log(`
 The following gulp tasks are available:
-build_core: run 'npm run build' in ${exec_dir}/core
-build_widget: run 'npm run build' in ${exec_dir}/widget
+build: execute 'npm run build' in subdirectories
+publish: execute 'npm publish' in subdirectories
+version --vers=<version>: execute 'npm version <vers>' in subdirectories
 `);
 }
 
 const build = gulp.series(build_core, build_widget);
+const version = gulp.series(version_core, version_widget);
 
 module.exports = {
     ...module.exports,
     default: help,
     help,
     build,
+    version,
+    test,
 }
 
