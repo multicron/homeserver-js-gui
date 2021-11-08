@@ -93,8 +93,8 @@ const publish = gulp.series(
 function test() {
     return gulp
         .src('*/package.json')
-        .pipe(debug()
-            .pipe(exec((file) => `echo ${file.path}`));
+        .pipe(debug())
+        .pipe(exec((file) => `echo ${file.path}`));
 }
 
 async function help() {
