@@ -1,7 +1,7 @@
 'use strict';
 
 const gulp = require('gulp');
-const debug = reguire('gulp-debug');
+const debug = require('gulp-debug');
 const spawn = require('child_process').spawn;
 const { Command } = require('commander');
 const program = new Command();
@@ -84,6 +84,16 @@ function version_widget() {
     return execute(`npm version ${program.opts().vers}`, `${exec_dir}/widget`);
 }
 
+
+function publish() {
+    return gulp.series(
+        execute(`npm publish`, `${exec_dir}/core`),
+        execute(`npm publish`, `${exec_dir}/widget`)
+    );
+
+}
+
+
 function test() {
     return gulp.src('*/package.json').pipe(console.log);
 }
@@ -107,5 +117,6 @@ module.exports = {
     build,
     version,
     test,
+    publish
 }
 
