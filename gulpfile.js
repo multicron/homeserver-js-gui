@@ -2,6 +2,7 @@
 
 const gulp = require('gulp');
 const debug = require('gulp-debug');
+const exec = require('gulp-exec');
 const spawn = require('child_process').spawn;
 const { Command } = require('commander');
 const program = new Command();
@@ -90,7 +91,10 @@ const publish = gulp.series(
 );
 
 function test() {
-    return gulp.src('*/package.json').pipe(debug);
+    return gulp
+        .src('*/package.json')
+        .pipe(debug()
+            .pipe(exec((file) => `echo ${file.path}`));
 }
 
 async function help() {
