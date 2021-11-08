@@ -10,7 +10,7 @@ console.log(`Execution directory = ${exec_dir}`);
 function execute(command, cwd, timeout) {
     cwd ??= process.cwd();
     console.log(`Executing "${command}" in directory ${cwd} with timeout ${timeout}`);
-    return spawn('/bin/sh', ['-c', command],
+    return spawn('cmd.exe', ['/C', command],
         {
             cwd: cwd,
             timeout: timeout,
