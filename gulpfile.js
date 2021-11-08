@@ -72,20 +72,20 @@ function build_widget() {
     return execute('npm run build', `${exec_dir}/widget`);
 }
 
-function version_core() {
-    if (!program.opts().vers) {
-        throw new Error("No version number specified");
-    }
-    return execute(`npm version ${program.opts().vers}`, `${exec_dir}/core`);
-}
+const ls = gulp.series(
+    () => execute(`npm ls`, `${exec_dir}/core`),
+    () => execute(`npm ls`, `${exec_dir}/widget`),
+);
 
-function version_widget() {
-    if (!program.opts().vers) {
-        throw new Error("No version number specified");
-    }
-    return execute(`npm version ${program.opts().vers}`, `${exec_dir}/widget`);
-}
+const install = gulp.series(
+    () => execute(`npm install`, `${exec_dir}/core`),
+    () => execute(`npm install`, `${exec_dir}/widget`),
+);
 
+const version = gulp.series(
+    () => execute(`npm version ${program.opts().vers} --otp=${program.opts().otp}`, `${exec_dir}/core`),
+    () => execute(`npm version ${program.opts().vers} --otp=${program.opts().otp}`, `${exec_dir}/widget`),
+);
 
 const publish = gulp.series(
     () => execute(`npm publish --otp=${program.opts().otp}`, `${exec_dir}/core`),
@@ -93,7 +93,7 @@ const publish = gulp.series(
 );
 
 function test() {
-    return gulp.src('*/package.json').pipe(console.log);
+    return gulp.src('*/package.json').pipe(debug);
 }
 
 async function help() {
@@ -106,7 +106,6 @@ version --vers=<version>: execute 'npm version <vers>' in subdirectories
 }
 
 const build = gulp.series(build_core, build_widget);
-const version = gulp.series(version_core, version_widget);
 
 module.exports = {
     ...module.exports,
@@ -115,6 +114,7 @@ module.exports = {
     build,
     version,
     test,
-    publish
+    publish,
+    ls
 }
 
