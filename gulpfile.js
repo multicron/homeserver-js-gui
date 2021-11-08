@@ -64,13 +64,10 @@ function shellfail() {
     return execute('ls; sleep 3; nofound');
 }
 
-function build_core() {
-    return execute('npm run build', `${exec_dir}/core`);
-}
-
-function build_widget() {
-    return execute('npm run build', `${exec_dir}/widget`);
-}
+const build = gulp.series(
+    () => execute(`npm run build`, `${exec_dir}/core`),
+    () => execute(`npm run build`, `${exec_dir}/widget`),
+);
 
 const ls = gulp.series(
     () => execute(`npm ls`, `${exec_dir}/core`),
@@ -100,12 +97,10 @@ async function help() {
     console.log(`
 The following gulp tasks are available:
 build: execute 'npm run build' in subdirectories
-publish: execute 'npm publish' in subdirectories
+publish --otp=<one-time-pad>: execute 'npm publish' in subdirectories
 version --vers=<version>: execute 'npm version <vers>' in subdirectories
 `);
 }
-
-const build = gulp.series(build_core, build_widget);
 
 module.exports = {
     ...module.exports,
@@ -115,6 +110,7 @@ module.exports = {
     version,
     test,
     publish,
-    ls
+    ls,
+    install
 }
 
