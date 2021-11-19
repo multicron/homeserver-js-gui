@@ -1,19 +1,10 @@
 
 'use strict';
 
-import { createStore } from 'redux';
-import { configuration } from '@homeserver-js-gui/core';
-
-import { MQTTClientSingleton } from '@homeserver-js-gui/core';
 import { StateHolder } from '@homeserver-js-gui/core';
 import { StateReceiverSingleton } from '@homeserver-js-gui/core';
 
 const debug_state = require('debug')('homeservergui:state');
-
-const mqtt = require('mqtt');
-const uuid = require('uuid');
-const EventEmitter = require('events');
-const fs = require('fs');
 
 export class StateSubscriber extends StateHolder {
     constructor(name) {
