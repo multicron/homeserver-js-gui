@@ -9,19 +9,14 @@ class ConfigurationSingleton {
     static singleton;
 
     constructor() {
-        if (Configuration.singleton) {
-            return Configuration.singleton;
+        if (ConfigurationSingleton.singleton) {
+            return ConfigurationSingleton.singleton;
         }
 
         Object.assign(this, config);
 
-        Configuration.singleton = this;
+        ConfigurationSingleton.singleton = this;
     }
 }
 
-const Configuration = new ConfigurationSingleton();
-
-export { Configuration };
-
-
-
+export const Configuration = new ConfigurationSingleton();
