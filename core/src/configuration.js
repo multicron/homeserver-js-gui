@@ -2,7 +2,7 @@
 
 // import logger from "debug"; const debug = logger('homeserver:configuration');
 
-import config from "../../../../src/configuration.js";
+import config from "C:\Users\Eric\Documents\VSCode\myhome-gui\etc\homeserver_js_gui_config.js";
 
 export class Configuration {
 

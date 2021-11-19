@@ -1,4 +1,4 @@
-export * from "./configuration.js";
+export * from "./Configuration.js";
 export * from "./HybridComponent.js";
 export * from "./HybridEffect.js";
 export * from "./MQTTClientSingleton.js";
