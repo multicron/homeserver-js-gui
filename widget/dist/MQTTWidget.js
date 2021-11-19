@@ -3,7 +3,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 import React from 'react';
 import { StateSubscriber } from '@homeserver-js-gui/core';
 import { inspect } from 'util';
-import { configuration } from '@homeserver-js-gui/core';
+import { Configuration } from '@homeserver-js-gui/core';
 import { HybridComponent } from '@homeserver-js-gui/core';
 import logger from "debug";
 import { jsx as _jsx } from "react/jsx-runtime";
@@ -76,8 +76,8 @@ export class _MQTTWidget extends HybridComponent {
 }
 
 _defineProperty(_MQTTWidget, "defaultProps", {
-  broker: configuration.mqtt_broker_url,
-  topic: configuration.mqtt_command_topic,
+  broker: Configuration.mqtt_broker_url,
+  topic: Configuration.mqtt_command_topic,
   field: "power",
   qos: 0,
   retain: false,

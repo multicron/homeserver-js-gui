@@ -5,7 +5,7 @@ import { ColorPicker as PrimeColorPicker } from 'primereact/colorpicker';
 import 'primereact/resources/themes/nova-light/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
-import { configuration } from '@homeserver-js-gui/core';
+import { Configuration } from '@homeserver-js-gui/core';
 
 
 class __ColorPicker extends React.Component {
@@ -86,8 +86,8 @@ export const ColorPicker = connect(
 )(__ColorPicker)
 
 ColorPicker.defaultProps = {
-    broker: configuration.mqtt_broker_url,
-    topic: configuration.mqtt_command_topic,
+    broker: Configuration.mqtt_broker_url,
+    topic: Configuration.mqtt_command_topic,
     field: "color",
     qos: 0,
     retain: false,

@@ -1,7 +1,7 @@
 import React from 'react';
 import Switch from '@material-ui/core/Switch';
 import mqtt from 'mqtt';
-import { configuration } from '@homeserver-js-gui/core';
+import { Configuration } from '@homeserver-js-gui/core';
 
 const debug = require('debug')('homeservergui:mqttswitch');
 
@@ -95,7 +95,7 @@ export class MQTTSwitch extends React.Component {
 }
 
 MQTTSwitch.defaultProps = {
-    broker: configuration.mqtt_broker_url,
+    broker: Configuration.mqtt_broker_url,
     topic: "tasmotas/rgb-bulb-5/cmnd/POWER",
     qos: 0,
     retain: false,

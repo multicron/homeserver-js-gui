@@ -5,7 +5,7 @@ import { Slider as PrimeSlider } from 'primereact/slider';
 import 'primereact/resources/themes/nova-light/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
-import { configuration } from '@homeserver-js-gui/core';
+import { Configuration } from '@homeserver-js-gui/core';
 import { _MQTTWidget } from '@homeserver-js-gui/widget';
 import { useSelector } from 'react-redux'
 
@@ -18,7 +18,7 @@ export class _Slider extends _MQTTWidget {
         min: 0,
         max: 100,
         step: 5,
-        max_update_rate: configuration.mqtt_max_update_rate
+        max_update_rate: Configuration.mqtt_max_update_rate
     }
 
     constructor(props) {

@@ -1,10 +1,10 @@
 'use strict';
 
-// import logger from "debug"; const debug = logger('homeserver:configuration');
+// import logger from "debug"; const debug = logger('homeserver:Configuration');
 
 import config from "C:\Users\Eric\Documents\VSCode\myhome-gui\etc\homeserver_js_gui_config.js";
 
-export class Configuration {
+class ConfigurationSingleton {
 
     static singleton;
 
@@ -19,9 +19,9 @@ export class Configuration {
     }
 }
 
-const configuration = new Configuration();
+const Configuration = new ConfigurationSingleton();
 
-export { configuration };
+export { Configuration };
 
 
 

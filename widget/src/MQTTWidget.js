@@ -1,15 +1,15 @@
 import React from 'react';
 import { StateSubscriber } from '@homeserver-js-gui/core';
 import { inspect } from 'util';
-import { configuration } from '@homeserver-js-gui/core';
+import { Configuration } from '@homeserver-js-gui/core';
 import { HybridComponent } from '@homeserver-js-gui/core';
 import logger from "debug"; const debug = logger('homeservergui:mqttwidget');
 
 export class _MQTTWidget extends HybridComponent {
 
     static defaultProps = {
-        broker: configuration.mqtt_broker_url,
-        topic: configuration.mqtt_command_topic,
+        broker: Configuration.mqtt_broker_url,
+        topic: Configuration.mqtt_command_topic,
         field: "power",
         qos: 0,
         retain: false,

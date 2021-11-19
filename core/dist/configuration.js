@@ -1,9 +1,10 @@
-'use strict'; // import logger from "debug"; const debug = logger('homeserver:configuration');
+'use strict'; // import logger from "debug"; const debug = logger('homeserver:Configuration');
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 import config from "C:\Users\Eric\Documents\VSCode\myhome-gui\etc\homeserver_js_gui_config.js";
-export class Configuration {
+
+class ConfigurationSingleton {
   constructor() {
     if (Configuration.singleton) {
       return Configuration.singleton;
@@ -15,7 +16,7 @@ export class Configuration {
 
 }
 
-_defineProperty(Configuration, "singleton", void 0);
+_defineProperty(ConfigurationSingleton, "singleton", void 0);
 
-const configuration = new Configuration();
-export { configuration };
+const Configuration = new ConfigurationSingleton();
+export { Configuration };

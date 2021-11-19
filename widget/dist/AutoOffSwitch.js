@@ -12,7 +12,7 @@ import { inspect } from 'util'; // import ButtonGroup from '@material-ui/core/Bu
 
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import { configuration } from '@homeserver-js-gui/core';
+import { Configuration } from '@homeserver-js-gui/core';
 import { StateSubscriber } from '@homeserver-js-gui/core';
 import { jsx as _jsx } from "react/jsx-runtime";
 import { jsxs as _jsxs } from "react/jsx-runtime";
@@ -102,8 +102,8 @@ function mapDispatchToProps(dispatch) {
 
 export const AutoOffSwitch = connect(mapStateToProps)(__AutoOffSwitch);
 AutoOffSwitch.defaultProps = {
-  broker: configuration.mqtt_broker_url,
-  topic: configuration.mqtt_command_topic,
+  broker: Configuration.mqtt_broker_url,
+  topic: Configuration.mqtt_command_topic,
   qos: 0,
   retain: false,
   dup: false,

@@ -5,14 +5,14 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import { inspect } from 'util';
 import { HybridComponent } from '@homeserver-js-gui/core';
-import { configuration } from '@homeserver-js-gui/core';
+import { Configuration } from '@homeserver-js-gui/core';
 
 
 export class _VideoMJPEG extends HybridComponent {
 
     static defaultProps = {
-        broker: configuration.mqtt_broker_url,
-        topic: configuration.mqtt_command_topic,
+        broker: Configuration.mqtt_broker_url,
+        topic: Configuration.mqtt_command_topic,
         qos: 0,
         debug: false
     };

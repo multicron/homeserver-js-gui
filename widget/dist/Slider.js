@@ -12,7 +12,7 @@ import { Slider as PrimeSlider } from 'primereact/slider';
 import 'primereact/resources/themes/nova-light/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
-import { configuration } from '@homeserver-js-gui/core';
+import { Configuration } from '@homeserver-js-gui/core';
 import { _MQTTWidget } from '@homeserver-js-gui/widget';
 import { useSelector } from 'react-redux';
 import { jsx as _jsx } from "react/jsx-runtime";
@@ -83,7 +83,7 @@ _defineProperty(_Slider, "defaultProps", { ..._get(_getPrototypeOf(_Slider), "de
   min: 0,
   max: 100,
   step: 5,
-  max_update_rate: configuration.mqtt_max_update_rate
+  max_update_rate: Configuration.mqtt_max_update_rate
 });
 
 export const Slider = _Slider.functionalize();

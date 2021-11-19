@@ -3,7 +3,7 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import { connect } from 'react-redux';
 import { inspect } from 'util';
-import { configuration } from '@homeserver-js-gui/core';
+import { Configuration } from '@homeserver-js-gui/core';
 import { jsx as _jsx } from "react/jsx-runtime";
 import { jsxs as _jsxs } from "react/jsx-runtime";
 import { Fragment as _Fragment } from "react/jsx-runtime";
@@ -139,8 +139,8 @@ function mapDispatchToProps(dispatch) {
 
 export const PolledImage = connect(mapStateToProps)(__PolledImage);
 PolledImage.defaultProps = {
-  broker: configuration.mqtt_broker_url,
-  topic: configuration.mqtt_command_topic,
+  broker: Configuration.mqtt_broker_url,
+  topic: Configuration.mqtt_command_topic,
   qos: 0,
   debug: false,
   uniquify: "?",
