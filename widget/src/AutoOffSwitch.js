@@ -12,7 +12,7 @@ import { inspect } from 'util';
 // import ButtonGroup from '@material-ui/core/ButtonGroup';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import { Configuration } from './Configuration.js';
+import { Configuration } from '@homeserver-js-gui/core';
 
 import { StateSubscriber } from '@homeserver-js-gui/core';
 
