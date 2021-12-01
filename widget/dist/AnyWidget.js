@@ -10,7 +10,7 @@ import { AutoOffSwitch } from '@homeserver-js-gui/widget';
 import { ColorPicker } from '@homeserver-js-gui/widget';
 import { PanelItem } from '@homeserver-js-gui/widget';
 import { EnableButton } from '@homeserver-js-gui/widget';
-import { Configuration } from './Configuration.js';
+import { Configuration } from '@homeserver-js-gui/core';
 import { VideoMJPEG } from '@homeserver-js-gui/widget';
 import { PolledImage } from '@homeserver-js-gui/widget';
 import { NetworkStatusDisplay } from '@homeserver-js-gui/widget';

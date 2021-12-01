@@ -3,7 +3,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 import React from 'react';
 import { StateSubscriber } from '@homeserver-js-gui/core';
 import { inspect } from 'util';
-import { Configuration } from './Configuration.js';
+import { Configuration } from '@homeserver-js-gui/core';
 import { HybridComponent } from '@homeserver-js-gui/core';
 import logger from "debug";
 import { jsx as _jsx } from "react/jsx-runtime";
