@@ -1,7 +1,7 @@
 import React from 'react';
 import Switch from '@material-ui/core/Switch';
 import mqtt from 'mqtt';
-import { Configuration } from '@homeserver-js-gui/core';
+import { Configuration } from './Configuration.js';
 
 const debug = require('debug')('homeservergui:mqttswitch');
 

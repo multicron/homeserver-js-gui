@@ -1,7 +1,7 @@
 'use strict';
 
-import { StateHolder } from '@homeserver-js-gui/core';
-import { StateReceiverSingleton } from '@homeserver-js-gui/core';
+import { StateHolder } from './StateHolder.js';
+import { StateReceiverSingleton } from './StateReceiverSingleton.js';
 
 const debug_state = require('debug')('homeservergui:state');
 

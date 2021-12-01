@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import { inspect } from 'util';
 import { HybridComponent } from '@homeserver-js-gui/core';
-import { Configuration } from '@homeserver-js-gui/core';
+import { Configuration } from './Configuration.js';
 
 
 export class _VideoMJPEG extends HybridComponent {

@@ -5,7 +5,7 @@ import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import { ToggleSwitch } from '@homeserver-js-gui/widget';
 import { Slider } from '@homeserver-js-gui/widget';
-import { Configuration } from '@homeserver-js-gui/core';
+import { Configuration } from './Configuration.js';
 import { jsx as _jsx } from "react/jsx-runtime";
 import { jsxs as _jsxs } from "react/jsx-runtime";
 export class TasmotaBulb extends React.Component {

@@ -1,5 +1,5 @@
-import { MQTTClientSingleton } from '@homeserver-js-gui/core';
-import { StateHolder } from '@homeserver-js-gui/core';
+import { MQTTClientSingleton } from './MQTTClientSingleton.js';
+import { StateHolder } from './StateHolder.js';
 
 const debug = require('debug')('homeservergui:state');
 

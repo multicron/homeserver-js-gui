@@ -5,7 +5,7 @@ import { ColorPicker as PrimeColorPicker } from 'primereact/colorpicker';
 import 'primereact/resources/themes/nova-light/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
-import { Configuration } from '@homeserver-js-gui/core';
+import { Configuration } from './Configuration.js';
 
 
 class __ColorPicker extends React.Component {

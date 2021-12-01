@@ -3,7 +3,7 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import { connect } from 'react-redux';
 import { inspect } from 'util';
-import { Configuration } from '@homeserver-js-gui/core';
+import { Configuration } from './Configuration.js';
 
 
 export class __PolledImage extends React.Component {

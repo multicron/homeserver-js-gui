@@ -1,7 +1,7 @@
 import React from 'react';
 import Switch from '@material-ui/core/Switch';
 import mqtt from 'mqtt';
-import { Configuration } from '@homeserver-js-gui/core';
+import { Configuration } from './Configuration.js';
 import { jsx as _jsx } from "react/jsx-runtime";
 import { Fragment as _Fragment } from "react/jsx-runtime";
 import { jsxs as _jsxs } from "react/jsx-runtime";

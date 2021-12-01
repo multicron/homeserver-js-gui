@@ -1,18 +1,14 @@
 'use strict';
 
 import { createStore } from 'redux';
-import { Configuration } from '@homeserver-js-gui/core';
-import { MQTTClientSingleton } from '@homeserver-js-gui/core';
+import { Configuration } from './Configuration.js';
+import { MQTTClientSingleton } from './MQTTClientSingleton.js';
 
 const debug = require('debug')('homeservergui:state');
 
-const mqtt = require('mqtt');
-
 const uuid = require('uuid');
 
-const EventEmitter = require('events');
-
-const fs = require('fs'); // The global Redux store is a singleton, but we can instantiate as
+const EventEmitter = require('events'); // The global Redux store is a singleton, but we can instantiate as
 // many StateHolder objects as we want.  They all reference the one
 // global_store.  They also all communicate on the same global_mqtt_client.
 // How expensive is an mqtt client?  I'm thinking perhaps each switch in the UI

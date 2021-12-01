@@ -1,4 +1,4 @@
-import { Configuration } from '@homeserver-js-gui/core';
+import { Configuration } from './Configuration.js';
 
 const mqtt = require('mqtt');
 const uuid = require('uuid');

@@ -18,6 +18,8 @@ program.parse(process.argv);
 
 console.log(program.opts());
 
+const subdirs = ['core', 'widget'];
+
 let exec_dir = process.cwd();
 
 console.log(`Execution directory = ${exec_dir}`);
@@ -31,6 +33,13 @@ function execute(command, cwd, timeout) {
             timeout: timeout,
             stdio: [null, "inherit", "inherit"]
         }
+    );
+}
+
+function series_in_subdirs(command) {
+    return gulp.series(subdirs.map((dir) => {
+        return () => execute(command, `${exec_dir}/${dir}`);
+    })
     );
 }
 
@@ -66,30 +75,19 @@ function shellfail() {
     return execute('ls; sleep 3; nofound');
 }
 
-const build = gulp.series(
-    () => execute(`npm run build`, `${exec_dir}/core`),
-    () => execute(`npm run build`, `${exec_dir}/widget`),
-);
+const build = series_in_subdirs('npm run build');
 
-const ls = gulp.series(
-    () => execute(`npm ls`, `${exec_dir}/core`),
-    () => execute(`npm ls`, `${exec_dir}/widget`),
-);
+const ls = series_in_subdirs('npm ls');
 
-const install = gulp.series(
-    () => execute(`npm install`, `${exec_dir}/core`),
-    () => execute(`npm install`, `${exec_dir}/widget`),
-);
+const install = series_in_subdirs('npm install');
 
-const version = gulp.series(
-    () => execute(`npm version ${program.opts().vers} --otp=${program.opts().otp}`, `${exec_dir}/core`),
-    () => execute(`npm version ${program.opts().vers} --otp=${program.opts().otp}`, `${exec_dir}/widget`),
-);
+const version = series_in_subdirs(`npm version ${program.opts().vers} --otp=${program.opts().otp}`);
 
-const publish = gulp.series(
-    () => execute(`npm publish --otp=${program.opts().otp}`, `${exec_dir}/core`),
-    () => execute(`npm publish --otp=${program.opts().otp}`, `${exec_dir}/widget`)
-);
+const publish = series_in_subdirs(`npm publish --otp=${program.opts().otp}`);
+
+const check = series_in_subdirs(`node --experimental-specifier-resolution=node dist/index.js`);
+
+const bldchk = gulp.series(build, check);
 
 function test() {
     return gulp
@@ -120,6 +118,8 @@ module.exports = {
     test,
     publish,
     ls,
-    install
+    install,
+    check,
+    bldchk
 }
 

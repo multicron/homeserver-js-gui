@@ -1,16 +1,13 @@
 'use strict';
 
 import { createStore } from 'redux';
-import { Configuration } from '@homeserver-js-gui/core';
-
-import { MQTTClientSingleton } from '@homeserver-js-gui/core';
+import { Configuration } from './Configuration.js';
+import { MQTTClientSingleton } from './MQTTClientSingleton.js';
 
 const debug = require('debug')('homeservergui:state');
 
-const mqtt = require('mqtt');
 const uuid = require('uuid');
 const EventEmitter = require('events');
-const fs = require('fs');
 
 
 // The global Redux store is a singleton, but we can instantiate as
