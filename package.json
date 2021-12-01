@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "commander": "^8.3.0",
+    "gulp": "^4.0.2",
+    "gulp-debug": "^4.0.0",
+    "gulp-exec": "^5.0.0"
+  }
+}

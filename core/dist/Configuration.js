@@ -2,7 +2,7 @@
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-import config from "C:\\Users\\Eric\\Documents\\VSCode\\myhome-gui\\etc\\homeserver_js_gui_config.js";
+const config_promise = import(process.env.REACT_APP_HOMESERVER_JS_GUI_CONFIG);
 
 class ConfigurationSingleton {
   constructor() {
@@ -10,7 +10,9 @@ class ConfigurationSingleton {
       return ConfigurationSingleton.singleton;
     }
 
-    Object.assign(this, config);
+    config_promise.then(config => {
+      Object.assign(this, config);
+    });
     ConfigurationSingleton.singleton = this;
   }
 

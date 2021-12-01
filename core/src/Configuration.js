@@ -2,8 +2,7 @@
 
 // import logger from "debug"; const debug = logger('homeserver:Configuration');
 
-//import config from "C:\\Users\\Eric\\Documents\\VSCode\\myhome-gui\\etc\\homeserver_js_gui_config.js";
-import config from "/home/auto/ottoreact/etc/homeserver_js_gui_config.js";
+const config_promise = import(process.env.REACT_APP_HOMESERVER_JS_GUI_CONFIG);
 
 class ConfigurationSingleton {
 
@@ -14,7 +13,9 @@ class ConfigurationSingleton {
             return ConfigurationSingleton.singleton;
         }
 
-        Object.assign(this, config);
+        config_promise.then((config) => {
+            Object.assign(this, config);
+        });
 
         ConfigurationSingleton.singleton = this;
     }
