@@ -3,9 +3,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 /* eslint-disable react-hooks/rules-of-hooks */
 import { makeStyles } from '@material-ui/core/styles';
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
-import Card from '@material-ui/core/Card';
-import CardContents from '@material-ui/core/Card';
+import { Grid } from '@material-ui/core';
+import { Card } from '@material-ui/core';
+import { CardContent } from '@material-ui/core';
 import { HybridComponent } from '@homeserver-js-gui/core';
 export class _PanelItem extends HybridComponent {
   constructor(props) {
@@ -37,7 +37,7 @@ export class _PanelItem extends HybridComponent {
         xl: 2
       }, /*#__PURE__*/React.createElement(Card, {
         className: classes.card
-      }, /*#__PURE__*/React.createElement(CardContents, {
+      }, /*#__PURE__*/React.createElement(CardContent, {
         style: {
           padding: "8px 8px",
           minHeight: '13vh'

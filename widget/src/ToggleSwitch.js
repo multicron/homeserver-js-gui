@@ -1,9 +1,9 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 
 import React from 'react';
-import Switch from '@material-ui/core/Switch';
-import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
+import { Switch } from '@material-ui/core';
+import { Typography } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import { _MQTTWidget } from '@homeserver-js-gui/widget';
 import { useSelector } from 'react-redux'
 import logger from "debug"; const debug = logger('homeservergui:toggleswitch');

@@ -1,8 +1,8 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 
 import { useEffect, useState } from 'react';
-import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
+import { Typography } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import { inspect } from 'util';
 import { HybridComponent } from '@homeserver-js-gui/core';
 import { Configuration } from '@homeserver-js-gui/core';

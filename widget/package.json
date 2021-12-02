@@ -8,21 +8,7 @@
     ".": "./dist/index.js"
   },
   "dependencies": {
-    "@homeserver-js-gui/core": "file:../../@homeserver-js-gui/core",
-    "@material-ui/core": "^4.11.3",
-    "@material-ui/icons": "^4.11.2",
-    "@material-ui/lab": "^4.0.0-alpha.57",
-    "@material-ui/pickers": "^3.2.10",
-    "@pqina/flip": "^1.7.7",
-    "mqtt": "^3.0.0",
-    "primeicons": "^1.0.0",
-    "primereact": "^3.1.4",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-redux": "^7.0.3",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.2",
-    "redux": "^4.0.1"
+    "@homeserver-js-gui/core": "file:../../@homeserver-js-gui/core"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

@@ -1,8 +1,8 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 
 import React from 'react';
-import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
+import { Typography } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import { HybridComponent } from '@homeserver-js-gui/core';
 import { useSelector, shallowEqual } from 'react-redux';
 import { UpdateIndicator } from '@homeserver-js-gui/widget';

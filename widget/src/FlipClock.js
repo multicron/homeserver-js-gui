@@ -2,11 +2,11 @@ import React from 'react';
 import { StateSubscriber } from '@homeserver-js-gui/core';
 import { connect } from 'react-redux';
 import { inspect } from 'util';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import { Grid } from '@material-ui/core';
+import { Typography } from '@material-ui/core';
 import { jsxFragment } from '@babel/types';
-import Card from '@material-ui/core/Card';
-import CardContents from '@material-ui/core/Card';
+import { Card } from '@material-ui/core';
+import { CardContent } from '@material-ui/core';
 import { Flip } from '@homeserver-js-gui/widget';
 
 export class FlipClock extends React.Component {
@@ -59,13 +59,13 @@ export class FlipClock extends React.Component {
             <>
                 <Grid component="label" container alignItems="center" direction="column" spacing={1}>
                     <Grid item p={5} xs={12} sm={12} md={12} lg={12} xl={12}>
-                        <Card><CardContents style={{ padding: "8px 0px" }}>
+                        <Card><CardContent style={{ padding: "8px 0px" }}>
                             <Typography component="div" noWrap variant="h3">
                                 <Flip value={this.state.hour} />{this.props.separator}
                                 <Flip value={this.state.minute} />{this.props.separator}
                                 <Flip value={this.state.second} />
                             </Typography>
-                        </CardContents></Card>
+                        </CardContent></Card>
                     </Grid>
                 </Grid>
             </>

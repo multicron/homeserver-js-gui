@@ -2,8 +2,8 @@
 
 import React from 'react';
 import { inspect } from 'util';
-import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
+import { Typography } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import { HybridComponent } from '@homeserver-js-gui/core';
 import { useSelector, shallowEqual } from 'react-redux'
 

@@ -1,8 +1,8 @@
 import React from 'react';
-import Switch from '@material-ui/core/Switch';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
-import Grid from '@material-ui/core/Grid';
+import { Switch } from '@material-ui/core';
+import { Typography } from '@material-ui/core';
+import { Box } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import { ToggleSwitch } from '@homeserver-js-gui/widget';
 import { Slider } from '@homeserver-js-gui/widget';
 import { Configuration } from '@homeserver-js-gui/core';

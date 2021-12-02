@@ -2,8 +2,8 @@ import React from 'react';
 import { StateSubscriber } from '@homeserver-js-gui/core';
 import { connect } from 'react-redux';
 import { inspect } from 'util';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import { Grid } from '@material-ui/core';
+import { Typography } from '@material-ui/core';
 import { jsxFragment } from '@babel/types';
 
 class __NetworkStatusDisplay extends React.Component {

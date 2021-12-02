@@ -4,11 +4,11 @@ import React from 'react';
 import { StateSubscriber } from '@homeserver-js-gui/core';
 import { connect } from 'react-redux';
 import { inspect } from 'util';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import { Grid } from '@material-ui/core';
+import { Typography } from '@material-ui/core';
 import { jsxFragment } from '@babel/types';
-import Card from '@material-ui/core/Card';
-import CardContents from '@material-ui/core/Card';
+import { Card } from '@material-ui/core';
+import { CardContent } from '@material-ui/core';
 import { Flip } from '@homeserver-js-gui/widget';
 export class FlipClock extends React.Component {
   constructor(props) {
@@ -70,7 +70,7 @@ export class FlipClock extends React.Component {
       md: 12,
       lg: 12,
       xl: 12
-    }, /*#__PURE__*/React.createElement(Card, null, /*#__PURE__*/React.createElement(CardContents, {
+    }, /*#__PURE__*/React.createElement(Card, null, /*#__PURE__*/React.createElement(CardContent, {
       style: {
         padding: "8px 0px"
       }
