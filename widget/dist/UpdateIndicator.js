@@ -5,9 +5,6 @@ import React from 'react';
 import { useEffect, useReducer, useState } from 'react';
 import { HybridComponent } from '@homeserver-js-gui/core';
 import { StateSubscriber } from '@homeserver-js-gui/core';
-import { jsxs as _jsxs } from "react/jsx-runtime";
-import { Fragment as _Fragment } from "react/jsx-runtime";
-import { jsx as _jsx } from "react/jsx-runtime";
 export class _UpdateIndicator extends HybridComponent {
   constructor(props) {
     super(props);
@@ -64,17 +61,14 @@ export class _UpdateIndicator extends HybridComponent {
   }
 
   render() {
-    return /*#__PURE__*/_jsx(_Fragment, {
-      children: /*#__PURE__*/_jsxs("span", {
-        style: {
-          fontSize: "x-small",
-          margin: "0px 0px 0px 0px",
-          padding: "0px 0px 0px 0px",
-          border: "0px 0px 0px 0px"
-        },
-        children: ["\xA0", this.render_ago(), "\xA0"]
-      })
-    });
+    return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontSize: "x-small",
+        margin: "0px 0px 0px 0px",
+        padding: "0px 0px 0px 0px",
+        border: "0px 0px 0px 0px"
+      }
+    }, "\xA0", this.render_ago(), "\xA0"));
   }
 
 }

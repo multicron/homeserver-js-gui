@@ -7,7 +7,6 @@ import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import CardContents from '@material-ui/core/Card';
 import { HybridComponent } from '@homeserver-js-gui/core';
-import { jsx as _jsx } from "react/jsx-runtime";
 export class _PanelItem extends HybridComponent {
   constructor(props) {
     super(props);
@@ -18,36 +17,32 @@ export class _PanelItem extends HybridComponent {
     const classes = _PanelItem.useStyles();
 
     if (this.props.noCard) {
-      return /*#__PURE__*/_jsx(Grid, {
+      return /*#__PURE__*/React.createElement(Grid, {
         item: true,
         p: 5,
         xs: 12,
         sm: 6,
         md: 4,
         lg: 3,
-        xl: 2,
-        children: this.props.children
-      });
+        xl: 2
+      }, this.props.children);
     } else {
-      return /*#__PURE__*/_jsx(Grid, {
+      return /*#__PURE__*/React.createElement(Grid, {
         item: true,
         p: 5,
         xs: 12,
         sm: 6,
         md: 4,
         lg: 3,
-        xl: 2,
-        children: /*#__PURE__*/_jsx(Card, {
-          className: classes.card,
-          children: /*#__PURE__*/_jsx(CardContents, {
-            style: {
-              padding: "8px 8px",
-              minHeight: '13vh'
-            },
-            children: this.props.children
-          })
-        })
-      });
+        xl: 2
+      }, /*#__PURE__*/React.createElement(Card, {
+        className: classes.card
+      }, /*#__PURE__*/React.createElement(CardContents, {
+        style: {
+          padding: "8px 8px",
+          minHeight: '13vh'
+        }
+      }, this.props.children)));
     }
   }
 

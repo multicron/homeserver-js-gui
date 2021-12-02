@@ -1,8 +1,8 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core';
+import Typography from '@material-ui/core';
 import { _Annunciator } from '@homeserver-js-gui/widget';
 import { useSelector } from 'react-redux';
 

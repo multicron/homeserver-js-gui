@@ -1,17 +1,16 @@
 import React from 'react';
 import Switch from '@material-ui/core/Switch';
 import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
-import Grid from '@material-ui/core/Grid';
+import Box from '@material-ui/core';
+import Grid from '@material-ui/core';
 import { ToggleSwitch } from '@homeserver-js-gui/widget';
 import { Slider } from '@homeserver-js-gui/widget';
 import { StateDisplay } from '@homeserver-js-gui/widget';
 import { IconSwitch } from '@homeserver-js-gui/widget';
 import { connect } from 'react-redux';
 import { inspect } from 'util';
-// import ButtonGroup from '@material-ui/core/ButtonGroup';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
+import Card from '@material-ui/core';
+import CardContent from '@material-ui/core';
 import { Configuration } from '@homeserver-js-gui/core';
 
 import { StateSubscriber } from '@homeserver-js-gui/core';

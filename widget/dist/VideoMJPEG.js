@@ -7,9 +7,6 @@ import Grid from '@material-ui/core/Grid';
 import { inspect } from 'util';
 import { HybridComponent } from '@homeserver-js-gui/core';
 import { Configuration } from '@homeserver-js-gui/core';
-import { jsx as _jsx } from "react/jsx-runtime";
-import { jsxs as _jsxs } from "react/jsx-runtime";
-import { Fragment as _Fragment } from "react/jsx-runtime";
 export class _VideoMJPEG extends HybridComponent {
   constructor(props) {
     super(props);
@@ -60,49 +57,38 @@ export class _VideoMJPEG extends HybridComponent {
   }
 
   debug_data() {
-    return /*#__PURE__*/_jsxs("div", {
-      children: ["this is ", inspect(this), /*#__PURE__*/_jsx("br", {}), "props are ", inspect(this.props)]
-    });
+    return /*#__PURE__*/React.createElement("div", null, "this is ", inspect(this), /*#__PURE__*/React.createElement("br", null), "props are ", inspect(this.props));
   }
 
   render() {
-    return /*#__PURE__*/_jsxs(_Fragment, {
-      children: [this.props.debug ? this.debug_data() : "", /*#__PURE__*/_jsxs(Grid, {
-        component: "label",
-        container: true,
-        alignItems: "center",
-        direction: "column",
-        spacing: 1,
-        children: [/*#__PURE__*/_jsx(Grid, {
-          item: true,
-          children: /*#__PURE__*/_jsx(Typography, {
-            component: "div",
-            children: this.props.name
-          })
-        }), /*#__PURE__*/_jsx(Grid, {
-          item: true,
-          children: /*#__PURE__*/_jsx("img", {
-            src: this.src,
-            alt: "Camera",
-            width: this.props.width,
-            onClick: this.handleClick
-          })
-        }), /*#__PURE__*/_jsx(Grid, {
-          item: true,
-          children: /*#__PURE__*/_jsx("div", {
-            style: {
-              padding: 4
-            },
-            children: /*#__PURE__*/_jsxs("a", {
-              href: this.props.url,
-              target: "_blank",
-              rel: "noopener noreferrer",
-              children: [" ", this.props.url]
-            })
-          })
-        })]
-      })]
-    });
+    return /*#__PURE__*/React.createElement(React.Fragment, null, this.props.debug ? this.debug_data() : "", /*#__PURE__*/React.createElement(Grid, {
+      component: "label",
+      container: true,
+      alignItems: "center",
+      direction: "column",
+      spacing: 1
+    }, /*#__PURE__*/React.createElement(Grid, {
+      item: true
+    }, /*#__PURE__*/React.createElement(Typography, {
+      component: "div"
+    }, this.props.name)), /*#__PURE__*/React.createElement(Grid, {
+      item: true
+    }, /*#__PURE__*/React.createElement("img", {
+      src: this.src,
+      alt: "Camera",
+      width: this.props.width,
+      onClick: this.handleClick
+    })), /*#__PURE__*/React.createElement(Grid, {
+      item: true
+    }, /*#__PURE__*/React.createElement("div", {
+      style: {
+        padding: 4
+      }
+    }, /*#__PURE__*/React.createElement("a", {
+      href: this.props.url,
+      target: "_blank",
+      rel: "noopener noreferrer"
+    }, " ", this.props.url)))));
   }
 
 }

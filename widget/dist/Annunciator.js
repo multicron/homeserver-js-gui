@@ -8,14 +8,11 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 /* eslint-disable react-hooks/rules-of-hooks */
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core';
+import Typography from '@material-ui/core';
 import { HybridComponent } from '@homeserver-js-gui/core';
 import { useSelector } from 'react-redux';
 import { UpdateIndicator } from '@homeserver-js-gui/widget';
-import { jsx as _jsx } from "react/jsx-runtime";
-import { jsxs as _jsxs } from "react/jsx-runtime";
-import { Fragment as _Fragment } from "react/jsx-runtime";
 export class _Annunciator extends HybridComponent {
   constructor(props) {
     super(props);
@@ -40,35 +37,27 @@ export class _Annunciator extends HybridComponent {
   }
 
   render() {
-    return /*#__PURE__*/_jsx(_Fragment, {
-      children: /*#__PURE__*/_jsxs(Grid, {
-        component: "label",
-        container: true,
-        alignItems: "center",
-        direction: "column",
-        spacing: 1,
-        children: [/*#__PURE__*/_jsx(Grid, {
-          item: true,
-          children: /*#__PURE__*/_jsx(Typography, {
-            component: "div",
-            children: this.props.title
-          })
-        }), /*#__PURE__*/_jsx(Grid, {
-          item: true,
-          children: /*#__PURE__*/_jsx(Typography, {
-            component: "div",
-            noWrap: true,
-            variant: this.props.variant,
-            children: this.replace_invalid(this.value, this.props.replacement)
-          })
-        }), /*#__PURE__*/_jsx(Grid, {
-          item: true,
-          children: /*#__PURE__*/_jsx(UpdateIndicator, {
-            name: this.props.name
-          })
-        })]
-      })
-    });
+    return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Grid, {
+      component: "label",
+      container: true,
+      alignItems: "center",
+      direction: "column",
+      spacing: 1
+    }, /*#__PURE__*/React.createElement(Grid, {
+      item: true
+    }, /*#__PURE__*/React.createElement(Typography, {
+      component: "div"
+    }, this.props.title)), /*#__PURE__*/React.createElement(Grid, {
+      item: true
+    }, /*#__PURE__*/React.createElement(Typography, {
+      component: "div",
+      noWrap: true,
+      variant: this.props.variant
+    }, this.replace_invalid(this.value, this.props.replacement))), /*#__PURE__*/React.createElement(Grid, {
+      item: true
+    }, /*#__PURE__*/React.createElement(UpdateIndicator, {
+      name: this.props.name
+    }))));
   }
 
 }

@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useRef } from 'react';
 
 // In order to subclass this class, you import the
-// named export, e.g., import { HybridComponent } from 'HybridComponent.js'.
+// named export, e.g., import { HybridComponent } from './HybridComponent.js'.
 // This will give you a class that you can extend.
 
 export class HybridComponent {

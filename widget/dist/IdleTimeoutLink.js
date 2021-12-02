@@ -3,8 +3,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 /* eslint-disable react-hooks/rules-of-hooks */
 import { Component } from 'react';
 import { withRouter } from 'react-router';
-import { Fragment as _Fragment } from "react/jsx-runtime";
-import { jsx as _jsx } from "react/jsx-runtime";
 export class __IdleTimeoutLink extends Component {
   constructor(props) {
     super(props);
@@ -38,9 +36,7 @@ export class __IdleTimeoutLink extends Component {
   }
 
   render() {
-    return /*#__PURE__*/_jsx(_Fragment, {
-      children: this.props.children
-    });
+    return /*#__PURE__*/React.createElement(React.Fragment, null, this.props.children);
   }
 
 }

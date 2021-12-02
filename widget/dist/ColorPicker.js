@@ -6,9 +6,6 @@ import 'primereact/resources/themes/nova-light/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import { Configuration } from '@homeserver-js-gui/core';
-import { jsx as _jsx } from "react/jsx-runtime";
-import { jsxs as _jsxs } from "react/jsx-runtime";
-import { Fragment as _Fragment } from "react/jsx-runtime";
 
 class __ColorPicker extends React.Component {
   constructor(props) {
@@ -53,14 +50,10 @@ class __ColorPicker extends React.Component {
   }
 
   render() {
-    return /*#__PURE__*/_jsxs(_Fragment, {
-      children: [/*#__PURE__*/_jsx(PrimeColorPicker, {
-        inline: true,
-        onChange: this.handleChange.bind(this)
-      }), /*#__PURE__*/_jsxs("div", {
-        children: [this.props.caption, " ", this.props.value]
-      })]
-    });
+    return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(PrimeColorPicker, {
+      inline: true,
+      onChange: this.handleChange.bind(this)
+    }), /*#__PURE__*/React.createElement("div", null, this.props.caption, " ", this.props.value));
   }
 
 }

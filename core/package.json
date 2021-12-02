@@ -4,6 +4,9 @@
   "type": "module",
   "description": "Core modules for HomeServer.js React GUI",
   "main": "dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx babel src --out-dir dist"
@@ -15,5 +18,14 @@
     "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.16.0",
     "@babel/preset-react": "^7.16.0"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "mqtt": "^3.0.0",
+    "redux": "^4.0.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.0.3",
+    "react-router-dom": "^5.2.0"
   }
 }

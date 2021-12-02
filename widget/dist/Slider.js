@@ -15,9 +15,6 @@ import 'primeicons/primeicons.css';
 import { Configuration } from '@homeserver-js-gui/core';
 import { _MQTTWidget } from '@homeserver-js-gui/widget';
 import { useSelector } from 'react-redux';
-import { jsx as _jsx } from "react/jsx-runtime";
-import { jsxs as _jsxs } from "react/jsx-runtime";
-import { Fragment as _Fragment } from "react/jsx-runtime";
 export class _Slider extends _MQTTWidget {
   constructor(props) {
     super(props);
@@ -61,18 +58,14 @@ export class _Slider extends _MQTTWidget {
   }
 
   render() {
-    return /*#__PURE__*/_jsxs(_Fragment, {
-      children: [/*#__PURE__*/_jsx(PrimeSlider, {
-        onChange: this.handleChange.bind(this),
-        onSlideEnd: this.handleChange.bind(this),
-        value: this.value,
-        min: this.props.min,
-        max: this.props.max,
-        step: this.props.step
-      }), /*#__PURE__*/_jsxs("div", {
-        children: [this.props.caption, " ", this.format_value(this.value)]
-      })]
-    });
+    return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(PrimeSlider, {
+      onChange: this.handleChange.bind(this),
+      onSlideEnd: this.handleChange.bind(this),
+      value: this.value,
+      min: this.props.min,
+      max: this.props.max,
+      step: this.props.step
+    }), /*#__PURE__*/React.createElement("div", null, this.props.caption, " ", this.format_value(this.value)));
   }
 
 }
