@@ -1,7 +1,7 @@
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 /* eslint-disable react-hooks/rules-of-hooks */
-import { useEffect, useState } from 'react';
+import { React, useEffect, useState } from 'react';
 import { Typography } from '@material-ui/core';
 import { Grid } from '@material-ui/core';
 import { inspect } from 'util';
