@@ -13,6 +13,8 @@ import { Card } from '@material-ui/core';
 import { CardContent } from '@material-ui/core';
 import { Configuration } from '@homeserver-js-gui/core';
 import { StateSubscriber } from '@homeserver-js-gui/core';
+import { jsx as _jsx } from "react/jsx-runtime";
+import { jsxs as _jsxs } from "react/jsx-runtime";
 
 class __AutoOffSwitch extends React.Component {
   constructor(props) {
@@ -38,34 +40,46 @@ class __AutoOffSwitch extends React.Component {
     let seconds_left = this.props.timeout - seconds_since_start; //        console.log("Seconds left", seconds_left);
 
     let time_left_string = new Date(seconds_left * 1000).toISOString().substr(11, 8);
-    return /*#__PURE__*/React.createElement(Card, null, " ", /*#__PURE__*/React.createElement(CardContent, null, /*#__PURE__*/React.createElement(Grid, {
-      container: true,
-      direction: "column",
-      justify: "space-evenly",
-      alignItems: "stretch"
-    }, /*#__PURE__*/React.createElement(Grid, {
-      item: true,
-      p: 1
-    }, /*#__PURE__*/React.createElement(ToggleSwitch, {
-      name: this.props.name,
-      broker: this.props.broker,
-      topic: this.props.topic,
-      field: "power",
-      true_value: this.props.true_value,
-      false_value: this.props.false_value
-    })), /*#__PURE__*/React.createElement(Grid, {
-      item: true
-    }, /*#__PURE__*/React.createElement(Box, null, /*#__PURE__*/React.createElement(Slider, {
-      name: this.props.name,
-      caption: "Time",
-      value_format: "time",
-      field: "timeout",
-      min: 0,
-      max: 2 * 60 * 60,
-      step: 5
-    }), /*#__PURE__*/React.createElement("br", null))), /*#__PURE__*/React.createElement(Grid, {
-      item: true
-    }, /*#__PURE__*/React.createElement(Box, null, "Time Left: ", this.props.start_time ? time_left_string : "Off")))));
+    return /*#__PURE__*/_jsxs(Card, {
+      children: [" ", /*#__PURE__*/_jsx(CardContent, {
+        children: /*#__PURE__*/_jsxs(Grid, {
+          container: true,
+          direction: "column",
+          justify: "space-evenly",
+          alignItems: "stretch",
+          children: [/*#__PURE__*/_jsx(Grid, {
+            item: true,
+            p: 1,
+            children: /*#__PURE__*/_jsx(ToggleSwitch, {
+              name: this.props.name,
+              broker: this.props.broker,
+              topic: this.props.topic,
+              field: "power",
+              true_value: this.props.true_value,
+              false_value: this.props.false_value
+            })
+          }), /*#__PURE__*/_jsx(Grid, {
+            item: true,
+            children: /*#__PURE__*/_jsxs(Box, {
+              children: [/*#__PURE__*/_jsx(Slider, {
+                name: this.props.name,
+                caption: "Time",
+                value_format: "time",
+                field: "timeout",
+                min: 0,
+                max: 2 * 60 * 60,
+                step: 5
+              }), /*#__PURE__*/_jsx("br", {})]
+            })
+          }), /*#__PURE__*/_jsx(Grid, {
+            item: true,
+            children: /*#__PURE__*/_jsxs(Box, {
+              children: ["Time Left: ", this.props.start_time ? time_left_string : "Off"]
+            })
+          })]
+        })
+      })]
+    });
   }
 
 }

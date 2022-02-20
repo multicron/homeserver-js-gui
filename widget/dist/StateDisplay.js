@@ -5,6 +5,9 @@ import { Typography } from '@material-ui/core';
 import { Grid } from '@material-ui/core';
 import { HybridComponent } from '@homeserver-js-gui/core';
 import { useSelector, shallowEqual } from 'react-redux';
+import { jsx as _jsx } from "react/jsx-runtime";
+import { jsxs as _jsxs } from "react/jsx-runtime";
+import { Fragment as _Fragment } from "react/jsx-runtime";
 export class _StateDisplay extends HybridComponent {
   variable_name() {
     return this.props.name.replace(/[^A-Za-z0-9_]/g, "_");
@@ -17,25 +20,31 @@ export class _StateDisplay extends HybridComponent {
   }
 
   render() {
-    return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Grid, {
-      container: true,
-      component: "label",
-      spacing: 2,
-      direction: "column"
-    }, /*#__PURE__*/React.createElement(Grid, {
-      item: true
-    }, /*#__PURE__*/React.createElement(Typography, {
-      component: "div",
-      align: "center"
-    }, this.props.name, /*#__PURE__*/React.createElement("br", null), new Date().toISOString())), /*#__PURE__*/React.createElement(Grid, {
-      item: true,
-      zeroMinWidth: true,
-      component: "pre",
-      style: {
-        whiteSpace: "pre-wrap",
-        margin: '5px'
-      }
-    }, inspect(this.device_state))));
+    return /*#__PURE__*/_jsx(_Fragment, {
+      children: /*#__PURE__*/_jsxs(Grid, {
+        container: true,
+        component: "label",
+        spacing: 2,
+        direction: "column",
+        children: [/*#__PURE__*/_jsx(Grid, {
+          item: true,
+          children: /*#__PURE__*/_jsxs(Typography, {
+            component: "div",
+            align: "center",
+            children: [this.props.name, /*#__PURE__*/_jsx("br", {}), new Date().toISOString()]
+          })
+        }), /*#__PURE__*/_jsx(Grid, {
+          item: true,
+          zeroMinWidth: true,
+          component: "pre",
+          style: {
+            whiteSpace: "pre-wrap",
+            margin: '5px'
+          },
+          children: inspect(this.device_state)
+        })]
+      })
+    });
   }
 
 }

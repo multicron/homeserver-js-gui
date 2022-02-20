@@ -14,6 +14,8 @@ import { red } from '@material-ui/core/colors';
 import { ExpandMore as ExpandMoreIcon } from '@material-ui/icons';
 import { IconSwitch } from '@homeserver-js-gui/widget';
 import { Slider } from '@homeserver-js-gui/widget';
+import { jsx as _jsx } from "react/jsx-runtime";
+import { jsxs as _jsxs } from "react/jsx-runtime";
 const useStyles = makeStyles(theme => ({
   card: {
     maxWidth: 345
@@ -45,42 +47,48 @@ export function TasmotaIconExpandable(props) {
     setExpanded(!expanded);
   };
 
-  return /*#__PURE__*/React.createElement(Card, {
-    className: classes.card
-  }, /*#__PURE__*/React.createElement(CardActions, {
-    disableSpacing: true
-  }, /*#__PURE__*/React.createElement(IconSwitch, {
-    name: props.name,
-    broker: props.broker,
-    topic: props.topic,
-    field: "power",
-    true_value: props.true_value,
-    false_value: props.false_value
-  }), /*#__PURE__*/React.createElement(IconButton, {
-    className: clsx(classes.expand, {
-      [classes.expandOpen]: expanded
-    }),
-    onClick: handleExpandClick,
-    "aria-expanded": expanded,
-    "aria-label": "show more"
-  }, /*#__PURE__*/React.createElement(ExpandMoreIcon, null))), /*#__PURE__*/React.createElement(Collapse, {
-    in: expanded,
-    timeout: "auto"
-  }, /*#__PURE__*/React.createElement(CardContent, null, /*#__PURE__*/React.createElement(Slider, {
-    name: props.name,
-    caption: "Brightness",
-    field: "dimmer",
-    min: 0,
-    max: 100,
-    step: 5
-  }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(Slider, {
-    name: props.name,
-    caption: "Color Temperature",
-    field: "color_temperature",
-    min: 2000,
-    max: 5000,
-    step: 100,
-    value: 3500
-  }), " ", /*#__PURE__*/React.createElement("br", null))));
+  return /*#__PURE__*/_jsxs(Card, {
+    className: classes.card,
+    children: [/*#__PURE__*/_jsxs(CardActions, {
+      disableSpacing: true,
+      children: [/*#__PURE__*/_jsx(IconSwitch, {
+        name: props.name,
+        broker: props.broker,
+        topic: props.topic,
+        field: "power",
+        true_value: props.true_value,
+        false_value: props.false_value
+      }), /*#__PURE__*/_jsx(IconButton, {
+        className: clsx(classes.expand, {
+          [classes.expandOpen]: expanded
+        }),
+        onClick: handleExpandClick,
+        "aria-expanded": expanded,
+        "aria-label": "show more",
+        children: /*#__PURE__*/_jsx(ExpandMoreIcon, {})
+      })]
+    }), /*#__PURE__*/_jsx(Collapse, {
+      in: expanded,
+      timeout: "auto",
+      children: /*#__PURE__*/_jsxs(CardContent, {
+        children: [/*#__PURE__*/_jsx(Slider, {
+          name: props.name,
+          caption: "Brightness",
+          field: "dimmer",
+          min: 0,
+          max: 100,
+          step: 5
+        }), /*#__PURE__*/_jsx("br", {}), /*#__PURE__*/_jsx(Slider, {
+          name: props.name,
+          caption: "Color Temperature",
+          field: "color_temperature",
+          min: 2000,
+          max: 5000,
+          step: 100,
+          value: 3500
+        }), " ", /*#__PURE__*/_jsx("br", {})]
+      })
+    })]
+  });
 }
 export default TasmotaIconExpandable;

@@ -5,6 +5,9 @@ import { Grid } from '@material-ui/core';
 import { HybridComponent } from '@homeserver-js-gui/core';
 import { useSelector, shallowEqual } from 'react-redux';
 import { UpdateIndicator } from '@homeserver-js-gui/widget';
+import { jsx as _jsx } from "react/jsx-runtime";
+import { jsxs as _jsxs } from "react/jsx-runtime";
+import { Fragment as _Fragment } from "react/jsx-runtime";
 export class _PlaceHolder extends HybridComponent {
   variable_name() {
     return this.props.name.replace(/[^A-Za-z0-9_]/g, "_");
@@ -17,22 +20,28 @@ export class _PlaceHolder extends HybridComponent {
   }
 
   render() {
-    return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Grid, {
-      container: true,
-      component: "label",
-      spacing: 2,
-      direction: "column"
-    }, /*#__PURE__*/React.createElement(Grid, {
-      item: true
-    }, /*#__PURE__*/React.createElement(Typography, {
-      component: "div",
-      align: "center"
-    }, this.props.name)), /*#__PURE__*/React.createElement(Grid, {
-      item: true,
-      align: "center"
-    }, "Loading... ", /*#__PURE__*/React.createElement(UpdateIndicator, {
-      name: this.props.name
-    }))));
+    return /*#__PURE__*/_jsx(_Fragment, {
+      children: /*#__PURE__*/_jsxs(Grid, {
+        container: true,
+        component: "label",
+        spacing: 2,
+        direction: "column",
+        children: [/*#__PURE__*/_jsx(Grid, {
+          item: true,
+          children: /*#__PURE__*/_jsx(Typography, {
+            component: "div",
+            align: "center",
+            children: this.props.name
+          })
+        }), /*#__PURE__*/_jsxs(Grid, {
+          item: true,
+          align: "center",
+          children: ["Loading... ", /*#__PURE__*/_jsx(UpdateIndicator, {
+            name: this.props.name
+          })]
+        })]
+      })
+    });
   }
 
 }

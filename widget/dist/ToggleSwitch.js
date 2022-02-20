@@ -14,6 +14,9 @@ import { Grid } from '@material-ui/core';
 import { _MQTTWidget } from '@homeserver-js-gui/widget';
 import { useSelector } from 'react-redux';
 import logger from "debug";
+import { jsx as _jsx } from "react/jsx-runtime";
+import { jsxs as _jsxs } from "react/jsx-runtime";
+import { Fragment as _Fragment } from "react/jsx-runtime";
 const debug = logger('homeservergui:toggleswitch');
 export class _ToggleSwitch extends _MQTTWidget {
   constructor(...args) {
@@ -35,23 +38,29 @@ export class _ToggleSwitch extends _MQTTWidget {
   }
 
   render(props) {
-    return /*#__PURE__*/React.createElement(React.Fragment, null, this.props.debug ? this.debug_data() : "", /*#__PURE__*/React.createElement(Grid, {
-      component: "label",
-      container: true,
-      alignItems: "center",
-      direction: "column",
-      spacing: 1
-    }, /*#__PURE__*/React.createElement(Grid, {
-      item: true
-    }, /*#__PURE__*/React.createElement(Typography, {
-      component: "div"
-    }, this.props.name)), /*#__PURE__*/React.createElement(Grid, {
-      item: true
-    }, /*#__PURE__*/React.createElement(Switch, {
-      checked: this.checked,
-      onChange: this.handleChange,
-      color: this.props.color
-    }))));
+    return /*#__PURE__*/_jsxs(_Fragment, {
+      children: [this.props.debug ? this.debug_data() : "", /*#__PURE__*/_jsxs(Grid, {
+        component: "label",
+        container: true,
+        alignItems: "center",
+        direction: "column",
+        spacing: 1,
+        children: [/*#__PURE__*/_jsx(Grid, {
+          item: true,
+          children: /*#__PURE__*/_jsx(Typography, {
+            component: "div",
+            children: this.props.name
+          })
+        }), /*#__PURE__*/_jsx(Grid, {
+          item: true,
+          children: /*#__PURE__*/_jsx(Switch, {
+            checked: this.checked,
+            onChange: this.handleChange,
+            color: this.props.color
+          })
+        })]
+      })]
+    });
   }
 
 }
