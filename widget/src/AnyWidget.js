@@ -36,6 +36,7 @@ export function AnyWidget(props) {
         case "LightBulb":
         case "Relay":
         case "CompositeDevice":
+        case "MagicGroup":
             return <ToggleSwitch field="power" {...props} />;
             break;
         case "BLEBeacon":
@@ -61,7 +62,6 @@ export function AnyWidget(props) {
         case "FeitElectricBulb":
             return <TasmotaExpandable {...props} />;
             break;
-        case "MagicGroup":
         case "Alarm":
             return <IconSwitch {...props} />;
             break;
