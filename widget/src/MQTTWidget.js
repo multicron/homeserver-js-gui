@@ -8,7 +8,7 @@ import logger from "debug"; const debug = logger('homeservergui:mqttwidget');
 export class _MQTTWidget extends HybridComponent {
 
     static defaultProps = {
-        broker: Configuration.mqtt_broker_url,
+        broker: Configuration.gui_mqtt_broker_url,
         topic: Configuration.mqtt_command_topic,
         field: "power",
         qos: 0,

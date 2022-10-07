@@ -86,7 +86,7 @@ export const ColorPicker = connect(
 )(__ColorPicker)
 
 ColorPicker.defaultProps = {
-    broker: Configuration.mqtt_broker_url,
+    broker: Configuration.gui_mqtt_broker_url,
     topic: Configuration.mqtt_command_topic,
     field: "color",
     qos: 0,

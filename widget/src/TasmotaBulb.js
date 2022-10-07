@@ -47,7 +47,7 @@ export class TasmotaBulb extends React.Component {
 }
 
 TasmotaBulb.defaultProps = {
-    broker: Configuration.mqtt_broker_url,
+    broker: Configuration.gui_mqtt_broker_url,
     topic: Configuration.mqtt_command_topic,
     qos: 0,
     retain: false,

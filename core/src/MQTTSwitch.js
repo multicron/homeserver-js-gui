@@ -95,7 +95,7 @@ export class MQTTSwitch extends React.Component {
 }
 
 MQTTSwitch.defaultProps = {
-    broker: Configuration.mqtt_broker_url,
+    broker: Configuration.gui_mqtt_broker_url,
     topic: "tasmotas/rgb-bulb-5/cmnd/POWER",
     qos: 0,
     retain: false,

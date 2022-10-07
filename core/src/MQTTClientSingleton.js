@@ -25,10 +25,10 @@ export class MQTTClientSingleton extends EventEmitter {
         this.mqtt_client_id = "MQTTClientSingleton_" + uuid.v4();
 
         debug("Configuration is", JSON.parse(JSON.stringify(Configuration)));
-        debug("Connecting to mqtt broker", Configuration.mqtt_broker_url);
+        debug("Connecting to mqtt broker", Configuration.gui_mqtt_broker_url);
 
         this.mqtt_client = mqtt.connect(
-            Configuration.mqtt_broker_url,
+            Configuration.gui_mqtt_broker_url,
             {
                 clientId: this.mqtt_client_id,
                 username: Configuration.mqtt_broker_login,
