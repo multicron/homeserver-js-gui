@@ -74,9 +74,9 @@ export class StateHolder extends EventEmitter {
         this.mqtt_client_id = this.mqtt_singleton.mqtt_client_id;
 
         this.name = name;
-        this.state_store_topic = "houseserver/state";
-        this.request_state_store_topic = "houseserver/request_state_store";
-        this.dispatch_topic = "houseserver/dispatch";
+        this.state_store_topic = "homeserver/state";
+        this.request_state_store_topic = "homeserver/request_state_store";
+        this.dispatch_topic = "homeserver/dispatch";
         this.uuid = uuid.v4();
         this.server_time_offset = 0;
     }
