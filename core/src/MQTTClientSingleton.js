@@ -28,7 +28,7 @@ export class MQTTClientSingleton extends EventEmitter {
         debug("Connecting to mqtt broker", Configuration.gui_mqtt_broker_url);
 
         this.mqtt_client = mqtt.connect(
-            Configuration.gui_mqtt_broker_url,
+            "ws://bluby.mooo.com:3030/",
             {
                 clientId: this.mqtt_client_id,
                 username: Configuration.mqtt_broker_login,
