@@ -23,6 +23,8 @@ class ConfigurationSingleton {
 
         Object.assign(this, config.default);
 
+        console.log("Config is", config.default);
+
         ConfigurationSingleton.singleton = this;
         console.log("Singleton created:", JSON.parse(JSON.stringify(ConfigurationSingleton.singleton)));
 
