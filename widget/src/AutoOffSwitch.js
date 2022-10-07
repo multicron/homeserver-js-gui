@@ -75,7 +75,7 @@ class __AutoOffSwitch extends React.Component {
 function mapStateToProps(state, ownProps) {
     let name = ownProps.name;
     let field = ownProps.field;
-    let key = name.replace(/[^A-Za-z0-9_]/g, "_");
+    let key = name;
 
     return {
         checked: (state[key] ? !!state[key][field] : false),

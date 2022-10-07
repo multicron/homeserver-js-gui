@@ -23,8 +23,8 @@ export class _ToggleSwitch extends _MQTTWidget {
 
     handleChange = (event) => {
         debug("checked", event.target.checked);
-        let command = `${this.props.topic}/${this.variable_name()}/${this.props.field}`;
-        debug("Sending command", command, "for", this.variable_name());
+        let command = `${this.props.topic}/${this.props.name}/${this.props.field}`;
+        debug("Sending command", command, "for", this.props.name);
         this.send_mqtt_msg(command, event.target.checked ? this.props.true_value : this.props.false_value);
     }
 
@@ -32,7 +32,7 @@ export class _ToggleSwitch extends _MQTTWidget {
         super.hooks(props);
 
         let field = props.field;
-        let key = this.variable_name();
+        let key = props.name;
 
         this.checked = useSelector(state_store => (state_store[key] ? !!state_store[key][field] : false));
     }

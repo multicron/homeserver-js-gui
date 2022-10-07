@@ -19,14 +19,10 @@ const fields = {
 
 class _WeatherAnnunciator extends _Annunciator {
 
-    variable_name() {
-        return this.props.name.replace(/[^A-Za-z0-9_]/g, "_");
-    }
-
     hooks(props) {
         super.hooks(props);
 
-        let key = this.variable_name();
+        let key = props.name;
 
         this.value = {};
 

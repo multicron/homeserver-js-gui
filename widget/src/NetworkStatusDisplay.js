@@ -17,12 +17,8 @@ class __NetworkStatusDisplay extends React.Component {
         this.state_subscriber.on('update', () => this.setState({}));
     }
 
-    variable_name() {
-        return this.props.name.replace(/[^A-Za-z0-9_]/g, "_");
-    }
-
     render() {
-        let item = this.variable_name();
+        let item = this.props.name;
         let status = this.state_subscriber.get().status || {};
         let data = status[this.props.mac] || {};
         let arp = data.arp || {};

@@ -15,7 +15,7 @@ export class _IconSwitch extends _ToggleSwitch {
     // handleChange needs to get "this" lexically
 
     handleChange = (event, value) => {
-        let command = `${this.props.topic}/${this.variable_name()}/${this.props.field}`;
+        let command = `${this.props.topic}/${this.props.name}/${this.props.field}`;
         console.log("Sending command", command, "value", value);
         this.send_mqtt_msg(command, value ? this.props.true_value : this.props.false_value);
 

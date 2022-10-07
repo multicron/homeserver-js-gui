@@ -47,7 +47,7 @@ export class _Slider extends _MQTTWidget {
         this.state_subscriber.modify({ [this.props.field]: value });
 
         if (now - this.last_xmit > this.props.max_update_rate) {
-            let command = `${this.props.topic}/${this.variable_name()}/${this.props.field}`;
+            let command = `${this.props.topic}/${this.props.name}/${this.props.field}`;
             console.log("Sending command", command, "Value", value);
             this.send_mqtt_msg(command, value.toString());
             this.last_xmit = now;
@@ -61,7 +61,7 @@ export class _Slider extends _MQTTWidget {
         super.hooks(props);
 
         let field = props.field;
-        let key = this.variable_name();
+        let key = this.props.name;
 
         this.value = useSelector(state_store => (state_store[key] ? state_store[key][field] : props.value));
     }

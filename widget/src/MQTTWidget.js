@@ -26,7 +26,7 @@ export class _MQTTWidget extends HybridComponent {
         // This call also makes sure we are subscribed to the mqtt topic for
         // updates to the redux state for this device:
 
-        this.state_subscriber = new StateSubscriber(this.variable_name());
+        this.state_subscriber = new StateSubscriber(this.props.name);
 
         this.client = this.state_subscriber.mqtt_client;
 
@@ -36,15 +36,15 @@ export class _MQTTWidget extends HybridComponent {
     }
 
     onConnect = () => {
-        debug("state_subscriber connect for ", this.variable_name());
+        debug("state_subscriber connect for ", this.props.name);
     }
 
     onReplace = () => {
-        debug("state_subscriber replace for ", this.variable_name());
+        debug("state_subscriber replace for ", this.props.name);
     }
 
     onUpdate = (message) => {
-        // debug("state_subscriber update for ", this.variable_name(), message);
+        // debug("state_subscriber update for ", this.props.name, message);
     }
 
     mqttSend(topic, value) {
@@ -66,10 +66,6 @@ export class _MQTTWidget extends HybridComponent {
     async send_mqtt_msg(topic, message) {
         const answer = await this.mqttSend(topic, message);
         debug("Result from mqttSend:", answer);
-    }
-
-    variable_name() {
-        return this.props.name.replace(/[^A-Za-z0-9_]/g, "_");
     }
 
     debug_data() {

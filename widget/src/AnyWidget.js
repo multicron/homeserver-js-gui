@@ -23,7 +23,7 @@ import { PlaceHolder } from '@homeserver-js-gui/widget';
 import { useSelector } from 'react-redux';
 
 export function AnyWidget(props) {
-    const key = props.name.replace(/[^A-Za-z0-9_]/g, "_");
+    const key = props.name;
     const device_class = useSelector(state_store => (state_store[key] ? state_store[key]._device_class : null));
 
     switch (device_class) {

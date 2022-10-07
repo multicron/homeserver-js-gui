@@ -9,14 +9,10 @@ import { UpdateIndicator } from '@homeserver-js-gui/widget';
 
 export class _PlaceHolder extends HybridComponent {
 
-    variable_name() {
-        return this.props.name.replace(/[^A-Za-z0-9_]/g, "_");
-    }
-
     hooks(props) {
         super.hooks(props);
 
-        let key = this.variable_name();
+        let key = this.props.name;
 
         this.device_state = useSelector(state_store => state_store[key], shallowEqual);
     }

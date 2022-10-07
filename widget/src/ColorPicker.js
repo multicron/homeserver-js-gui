@@ -45,15 +45,11 @@ class __ColorPicker extends React.Component {
         let value = event.value;
         let now = new Date();
         if (now.getTime() - this.last_xmit.getTime() > this.props.max_update_rate) {
-            let command = `${this.props.topic}/${this.variable_name()}/${this.props.field}`;
+            let command = `${this.props.topic}/${this.props.name}/${this.props.field}`;
             console.log("Sending command", command, "Value", value);
             this.send_mqtt_msg(command, value.toString());
             this.last_xmit = now;
         }
-    }
-
-    variable_name() {
-        return this.props.name.replace(/[^A-Za-z0-9_]/g, "_");
     }
 
     render() {
@@ -73,7 +69,7 @@ class __ColorPicker extends React.Component {
 function mapStateToProps(state, ownProps) {
     let name = ownProps.name;
     let field = ownProps.field;
-    let key = name.replace(/[^A-Za-z0-9_]/g, "_");
+    let key = name;
 
     return {
         value: (state[key] ? state[key][field] : ownProps.value),

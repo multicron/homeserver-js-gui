@@ -9,11 +9,7 @@ class __TextDisplay extends React.Component {
 
         this.props = props;
 
-        this.state_subscriber = new StateSubscriber(this.variable_name());
-    }
-
-    variable_name() {
-        return this.props.name.replace(/[^A-Za-z0-9_]/g, "_");
+        this.state_subscriber = new StateSubscriber(this.props.name);
     }
 
     render() {
@@ -28,7 +24,7 @@ class __TextDisplay extends React.Component {
 function mapStateToProps(state, ownProps) {
     let name = ownProps.name;
     let field = ownProps.field;
-    let key = name.replace(/[^A-Za-z0-9_]/g, "_");
+    let key = name;
 
     return {
         text: (state[key] ? state[key][field] : undefined),

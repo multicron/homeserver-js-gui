@@ -18,10 +18,6 @@ export class _UpdateIndicator extends HybridComponent {
 
     }
 
-    variable_name() {
-        return this.props.name.replace(/[^A-Za-z0-9_]/g, "_");
-    }
-
     state_listener = () => {
         this.last_update = new Date();
         this.force_update();
@@ -30,7 +26,7 @@ export class _UpdateIndicator extends HybridComponent {
     hooks() {
         [, this.force_update] = useReducer(x => x + 1, 0);
 
-        [this.state_subscriber] = useState(() => new StateSubscriber(this.variable_name(this.props.name)));
+        [this.state_subscriber] = useState(() => new StateSubscriber(this.props.name));
 
 
         useEffect(() => {

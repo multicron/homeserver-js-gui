@@ -19,10 +19,6 @@ export class _Annunciator extends HybridComponent {
         super(props);
     }
 
-    variable_name() {
-        return this.props.name.replace(/[^A-Za-z0-9_]/g, "_");
-    }
-
     replace_invalid(value, replacement) {
         if (value === undefined) return replacement;
         if (value === null) return replacement;
@@ -34,7 +30,7 @@ export class _Annunciator extends HybridComponent {
         super.hooks(props);
 
         let field = props.field;
-        let key = this.variable_name();
+        let key = this.props.name;
 
         this.value = useSelector(state_store => (state_store[key] ? state_store[key][field] : null));
     }

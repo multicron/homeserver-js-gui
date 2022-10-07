@@ -10,11 +10,7 @@ export class StateSubscriberEffect extends HybridEffect {
         super();
 
         [, this.forceUpdate] = useReducer(x => x + 1, 0);
-        this.state_subscriber = new StateSubscriber(this.variable_name(device_name));
-    }
-
-    variable_name(name) {
-        return name.replace(/[^A-Za-z0-9_]/g, "_");
+        this.state_subscriber = new StateSubscriber(device_name);
     }
 
     state_listener = () => {

@@ -72,10 +72,6 @@ export class __PolledImage extends React.Component {
         }
     }
 
-    variable_name() {
-        return this.props.name.replace(/[^A-Za-z0-9_]/g, "_");
-    }
-
     debug_data() {
         return <div>
             local state is {inspect(this.state)}
@@ -119,7 +115,7 @@ export class __PolledImage extends React.Component {
 function mapStateToProps(state, ownProps) {
     let name = ownProps.name;
     let field = ownProps.field;
-    let key = name.replace(/[^A-Za-z0-9_]/g, "_");
+    let key = name;
 
     return {
         checked: (state[key] ? !!state[key][field] : false),
