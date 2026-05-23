@@ -48,6 +48,7 @@ export function AnyWidget(props) {
             return <PingAnnunciator title={props.name} port="" {...props} />;
             break;
         case "Scene":
+        case "DelayedOnSwitch":
             return <EnableButton field="activate" {...props} />;
             break;
         case "Sound":
