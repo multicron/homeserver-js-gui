@@ -31,6 +31,7 @@ export function AnyWidget(props) {
             return <StateDisplay {...props} />;
             break;
         case "Switch":
+        case "PowerSensingSwitch":
         case "AutoOffSwitch":
         case "TasmotaOutlet":
         case "LightBulb":
