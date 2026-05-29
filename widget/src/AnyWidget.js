@@ -32,6 +32,7 @@ export function AnyWidget(props) {
             break;
         case "Switch":
         case "ManualPowerOnSwitch":
+        case "TasmotaPowerMonitoringOutlet":
         case "AutoOffSwitch":
         case "TasmotaOutlet":
         case "LightBulb":
